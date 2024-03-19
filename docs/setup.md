@@ -7,4 +7,6 @@ Berikut aplikasi yang akan digunakan dalam perkuliahan.
 3. XAMPP
 
 ## Setup Project Pertama
+**Referensi:**
 - [Belajar JSP dan Servlet - Cara Membuat Program JSP Hello World](https://www.youtube.com/watch?v=-d2GobvWdro)
+- [How to Configure Tomcat Server in Netbeans IDE | Configure Tomcat in Netbeans](https://www.youtube.com/watch?v=KnkKZ2zDfIM)
