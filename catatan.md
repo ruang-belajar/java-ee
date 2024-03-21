@@ -7,7 +7,7 @@
   - Netbeans 21
   - JDK 17
   - Akun Github + Github Desktop 
-  - Join Github Classroom: https://classroom.github.com/classrooms/114467801-2024-java-lanjut
+  - Join Github Classroom (link terlampir di Edlink: Ruang Kelas)
 - Tugas 1:
   - pelajari [Web Programming (JSP)](docs/res/Web-Programming-(JSP).pdf)
   - Setup web server (XAMPP)
