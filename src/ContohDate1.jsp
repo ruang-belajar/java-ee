@@ -7,12 +7,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        Sekarang: 
-        <% 
+        Waktu sekarang:
+        <%
             Date sekarang = new Date();
-           out.println(sekarang.toString());
-            
+            out.println(sekarang.toString());
         %>
+        <Br>
+        Bisa juga di cetak menggunakan <code>&lt;%= ... %&gt;</code>
+        <%= sekarang.toString() %>
     </body>
 </html>
