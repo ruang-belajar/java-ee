@@ -7,3 +7,4 @@ Repositori materi kuliah _Pemrograman Java Lanjut_
 
 **Link dan Referensi:**
 - [Belajar JSP dan Servlet - Cara Membuat Program JSP Hello World](https://www.youtube.com/watch?v=-d2GobvWdro)
+- [JSP database connection with Mysql in Netbeans](https://www.youtube.com/watch?v=N4BnT7LXlcw)
