@@ -18,7 +18,7 @@
 - Siapkan akun Github
 - Download & Install _Github Desktop_
 - Konek ke repositori `2024-java-lanjut`
-- [Setup Netbeans](docs/setup.md)
+- [Panduan Setup Netbeans](docs/setup.md)
 - File contoh: [ContohDate1.jsp](src/ContohDate1.jsp), [MysqlInsert.jsp](src/MysqlInsert.jsp), [MysqlSelect.jsp](src/MysqlSelect.jsp.jsp)
 - Tugas 2:
   - Buat form yang meminta input `nama` dan `nilai` (file:`input_nilai.jsp`)
