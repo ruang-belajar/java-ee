@@ -23,13 +23,13 @@
                     
                     // Menampilkan data
                     out.print("<br>Menampilkan isi table <i>daftar</i><br>  ");
+
                     // prepare select statement
-                    String sql = "SELECT * from daftar order by id desc limit 10";
+                    String sql = "INSERT INTO daftar (nama,nilai) values (?,?)";
                     PreparedStatement st = connection.prepareStatement(sql);
+                    st.setString(1,"Budi");
+                    st.setInt(2, 60);
                     ResultSet rs = st.executeQuery(sql);
-                    while(rs.next()) {
-                        out.println("-"+rs.getString("nama")+" : "+rs.getString("nilai")+"<br>");
-                    }
                 }
                 connection.close();
             } catch (Exception ex) {
