@@ -1,10 +1,3 @@
-<%-- 
-    Document   : tampil_post
-    Created on : Mar 28, 2024, 5:55:48 PM
-    Author     : Lenovo
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
