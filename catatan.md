@@ -25,3 +25,20 @@
   - Post form ke file `hasil.jsp`. Halaman tersebut kembali menampilkan `nama` dan `nilai`, ditambah dengan `keterangan`.
   - `keterangan` adalah _LULUS_ jika `nilai` lebih besar dari 60, jika tidak maka `keterangan` adalah `TIDAK LULUS`.
   - Gunakan file [hasil.php](https://github.com/ruang-belajar/java-ee/blob/master/src/hasil.php) sebagai petunjuk untuk membuat `hasil.jsp`
+
+## Pertemuan 3
+- Pelajari repositori https://github.com/pujangga123/LatihanJSP
+- Persiapkan database
+  - download [test.sql](src/test.sql)
+  - gunakan [phpMyAdmin](http://localhost/phpmyadmin/) untuk import database
+- Tugas buat database [tokoanak]
+  - buat tabel [barang]
+    - `kode`: _VARCHAR(10)_
+    - `nama`: _VARCHAR(30)_
+    - `kategori`: _VARCHAR(10)_
+    - `harga_beli`: _INT_
+    - `harga_jual`: _INT_
+- Buat project `TokoAnak`
+  - buat file JSP untuk input data bara
+  - buat file JSP untuk menampilkan data barang yang ada
+  - buat file JSP untuk menghapus data barang
