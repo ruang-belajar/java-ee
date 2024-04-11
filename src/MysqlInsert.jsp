@@ -29,7 +29,7 @@
                     PreparedStatement st = connection.prepareStatement(sql);
                     st.setString(1,"Budi");
                     st.setInt(2, 60);
-                    ResultSet rs = st.executeQuery(sql);
+                    ResultSet rs = st.executeUpdate(sql);
                 }
                 connection.close();
             } catch (Exception ex) {
