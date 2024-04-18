@@ -25,3 +25,9 @@
   - Post form ke file `hasil.jsp`. Halaman tersebut kembali menampilkan `nama` dan `nilai`, ditambah dengan `keterangan`.
   - `keterangan` adalah _LULUS_ jika `nilai` lebih besar dari 60, jika tidak maka `keterangan` adalah `TIDAK LULUS`.
   - Gunakan file [hasil.php](https://github.com/ruang-belajar/java-ee/blob/master/src/hasil.php) sebagai petunjuk untuk membuat `hasil.jsp`
+
+## Pertemuan 3: CRUD
+- Persiapan database ([test.sql](src/test.sql))
+- Check [pujangga123/LatihanJSP](https://github.com/pujangga123/LatihanJSP)
+- buat JSP untuk insert & menampilkan data
+- Pelajari struktur program
