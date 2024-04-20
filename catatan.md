@@ -29,5 +29,14 @@
 ## Pertemuan 3: CRUD
 - Persiapan database ([test.sql](src/test.sql))
 - Check [pujangga123/LatihanJSP](https://github.com/pujangga123/LatihanJSP)
+- Pelajari [struktur file JSP](docs/struktur-file.md)
 - buat JSP untuk insert & menampilkan data
-- Pelajari struktur program
+  - form_insert.jsp
+  - show_mahasiswa.jsp
+  - insert_mahasiswa.jsp
+  - hapus_mahasiswa.jsp
+- Tugas:
+  - Buat tabel `jurusan`, dengan kolom sebagai berikut:
+    - `kode`: _VARCHAR(10)_
+    - `nama`: _VARCHAR(20)_
+  - Buat file untuk menambahkan (`tambah_jurusan.jsp`), menampilkan (`show_jurusan.jsp`) dan menghapus data (`hapus_jurusan.jsp`).

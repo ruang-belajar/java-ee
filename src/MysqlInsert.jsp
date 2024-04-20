@@ -22,12 +22,16 @@
 
         if (!connection.isClosed()) {
 
+            String nama = "Budi";
+            String nim = "3923123";
+            Integer nilai = 34;
+
             // prepare select statement
             String sql = "INSERT INTO mahasiswa (nim,nama,nilai) values (?,?,?)";
             PreparedStatement st = connection.prepareStatement(sql);
-            st.setString(1, request.getParameter("nim"));
-            st.setString(2, request.getParameter("nama"));
-            st.setInt(3, Integer.parseInt(request.getParameter("nilai")));
+            st.setString(1, nim);
+            st.setString(2, nama);
+            st.setInt(3, nilai);
             st.executeUpdate();
         }
         connection.close();
@@ -47,9 +51,9 @@
     </head>
     <%-- DOKUMEN HTML: BODY --%>
     <body>
-        NIM: <%=request.getParameter("nim")%><br>
-        Nama: <%=request.getParameter("nama")%><br>
-        <%=hasil%><br>
+        NIM: <%=nim%><br>
+        Nama: <%=nama%><br>
+        Nilai: <%=nilai%><br>
         <a href="index.html">Kembali ke halaman depan</a>
     </body>
 </html>
