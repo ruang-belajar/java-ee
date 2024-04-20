@@ -39,4 +39,4 @@
   - Buat tabel `jurusan`, dengan kolom sebagai berikut:
     - `kode`: _VARCHAR(10)_
     - `nama`: _VARCHAR(20)_
-  - Buat file untuk menambahkan (`tambah_jurusan.jsp`), menampilkan (`show_jurusan.jsp`) dan menghapus data (`hapus_jurusan.jsp`).
+  - Buat file untuk menampilkan form (`form_tambah_jurusan.jsp`), menambahkan (`tambah_jurusan.jsp`), menampilkan (`show_jurusan.jsp`) dan menghapus data (`hapus_jurusan.jsp`).
