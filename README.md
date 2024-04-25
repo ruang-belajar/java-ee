@@ -6,5 +6,6 @@ Repositori materi kuliah _Pemrograman Java Lanjut_
 3. [Folder contoh program](src/)
 
 **Link dan Referensi:**
+- [pujangga123/LatihanJSP](https://github.com/pujangga123/LatihanJSP)
 - [Belajar JSP dan Servlet - Cara Membuat Program JSP Hello World](https://www.youtube.com/watch?v=-d2GobvWdro)
 - [JSP database connection with Mysql in Netbeans](https://www.youtube.com/watch?v=N4BnT7LXlcw)

@@ -31,12 +31,19 @@
 - Check [pujangga123/LatihanJSP](https://github.com/pujangga123/LatihanJSP)
 - Pelajari [struktur file JSP](docs/struktur-file.md)
 - buat JSP untuk insert & menampilkan data
-  - form_insert.jsp
-  - show_mahasiswa.jsp
-  - insert_mahasiswa.jsp
-  - hapus_mahasiswa.jsp
+  - `form_insert.jsp`
+  - `show_mahasiswa.jsp`
+  - `insert_mahasiswa.jsp`
+  - `hapus_mahasiswa.jsp`
 - Tugas:
   - Buat tabel `jurusan`, dengan kolom sebagai berikut:
     - `kode`: _VARCHAR(10)_
     - `nama`: _VARCHAR(20)_
   - Buat file untuk menampilkan form (`form_tambah_jurusan.jsp`), menambahkan (`tambah_jurusan.jsp`), menampilkan (`show_jurusan.jsp`) dan menghapus data (`hapus_jurusan.jsp`).
+
+## Pertemuan 4:
+- Setup class `Mahasiswa.java`, simpan dalam folder `kampus` di _Web Pages_
+- Check [pujangga123/LatihanJSP](https://github.com/pujangga123/LatihanJSP)
+- Buat `form2_insert.jsp` (copy dari `form_insert.jsp`) mengarah ke `insert2_mahasiswa.jsp` untuk proses data 
+- Membuat program untuk menampilkan insert (`insert2_mahasiswa.jsp`) dan delete (`delete2_mahasiswa.jsp`), menggunakan class Mahasiswa
+- Buat `index.html` mengarah ke `form_insert.jsp`, `form2_insert.jsp`, `show_mahasiswa.jsp`, `show2_mahasiswa.jsp` 
