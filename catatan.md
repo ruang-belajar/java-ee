@@ -48,3 +48,12 @@
 - Membuat program untuk menampilkan insert (`insert2_mahasiswa.jsp`) dan delete (`delete2_mahasiswa.jsp`), menggunakan class Mahasiswa
 - Buat `index.html` mengarah ke `form_insert.jsp`, `form2_insert.jsp`, `show_mahasiswa.jsp`, `show2_mahasiswa.jsp` 
 - Bagi yang menemukan masalah Netbeans selalu meminta _username_ dan _password_ check solusi di bagian [FAQ](docs/faq.md)
+
+## Pertemuan 5:
+- review design
+- siapkan `index.jsp`, redirect ke `home_admin.jsp`
+- siapkan `home_admin.jsp`
+  - link ke `show2_mahasiswa.jsp`
+- edit `show2_mahasiswa.jsp`
+- _save as_ `insert2_mahasiswa.jsp` menjadi `update_mahasiswa.jsp`.
+- Buat `update_mahasiswa.jsp` sehingga berfungsi untuk update dan insert data ke tabel `mahasiswa`. 
