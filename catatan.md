@@ -51,9 +51,25 @@
 
 ## Pertemuan 5:
 - review design
-- siapkan `index.jsp`, redirect ke `home_admin.jsp`
-- siapkan `home_admin.jsp`
+  - Halaman: 
+    - login
+    - beranda
+    - data dosen
+    - form dosen
+    - data mahasiswa
+    - form mahasiswa
+    - data mata kuliah
+    - form mata kuliah
+    - data users
+    - form users
+    - data kelas
+    - form kelas
+    - tambah peserta
+- siapkan `beranda_admin.jsp`
   - link ke `show2_mahasiswa.jsp`
+- siapkan `index.jsp`, redirect ke `home_admin.jsp`
+  - lihat https://stackoverflow.com/questions/4967482/redirect-pages-in-jsp
 - edit `show2_mahasiswa.jsp`
+  - tambahkan link ke `insert2_mahasiswa.jsp`
 - _save as_ `insert2_mahasiswa.jsp` menjadi `update_mahasiswa.jsp`.
 - Buat `update_mahasiswa.jsp` sehingga berfungsi untuk update dan insert data ke tabel `mahasiswa`. 
