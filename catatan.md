@@ -65,11 +65,11 @@
     - data kelas
     - form kelas
     - tambah peserta
-- siapkan `beranda_admin.jsp`
-  - link ke `show2_mahasiswa.jsp`
-- siapkan `index.jsp`, redirect ke `home_admin.jsp`
-  - lihat https://stackoverflow.com/questions/4967482/redirect-pages-in-jsp
-- edit `show2_mahasiswa.jsp`
+- buat `data_mahasiswa.jsp` (_copy-paste_ dari `show2_mahasiswa.jsp`)
+- buat `form_mahasiswa.jsp` (_copy-paste_ dari `insert2_mahasiswa.jsp`)
   - tambahkan link ke `insert2_mahasiswa.jsp`
-- _save as_ `insert2_mahasiswa.jsp` menjadi `update_mahasiswa.jsp`.
-- Buat `update_mahasiswa.jsp` sehingga berfungsi untuk update dan insert data ke tabel `mahasiswa`. 
+  - edit sehingga berfungsi untuk menambahkan, menampilkan, dan update data
+- siapkan `beranda_admin.jsp`
+  - link ke `data_mahasiswa.jsp`
+- siapkan `index.jsp`, redirect ke `beranda_admin.jsp`
+  - lihat https://stackoverflow.com/questions/4967482/redirect-pages-in-jsp
