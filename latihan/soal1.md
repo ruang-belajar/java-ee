@@ -49,4 +49,4 @@ File **soal1.jsp** jika dibuka akan menampilkan form dengan 2 input, masing-masi
 
 Ketika di _submit_, inputan akan dikirimkan ke **proses.jsp** untuk kemudian ditampilkan.
 
-Tuliskan kode program pada bagian yang ditandasi **(a)**, **(b)**, **(c) **dan **(d)**
+Tuliskan kode program pada bagian yang ditandai **(a)**, **(b)**, **(c)** dan **(d)**

@@ -45,4 +45,4 @@ file **daftar_dosen.jsp**
 
 ---
 
-Tuliskan kode program pada bagian yang ditandasi **(a)**, **(b)**, **(c)**, **(d)**
+Tuliskan kode program pada bagian yang ditandai **(a)**, **(b)**, **(c)**, **(d)**
