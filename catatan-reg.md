@@ -1,4 +1,4 @@
-# Catatan Kuliah: Pemrograman Java Lanjut 2024
+# Catatan Kuliah: Pemrograman Java Lanjut 2024 (kelas Reguler)
 
 ## Pertemuan 1
 - Pendahuluan: Java EE
@@ -84,7 +84,11 @@
 ## Pertemuan 7: UTS
 
 ## Pertemuan 8:
-- Buat `data_usersmahasiswa.jsp`
-- Buat `form_usersmahasiswa.jsp`
-- Buat `data_usersdosen.jsp`
-- Buat `form_usersdosen.jsp`
+- Buat data_user.jsp
+- Buat form_user.jsp
+- Tugas:
+  - Buat `data_peserta.jsp`
+  - Buat `form_peserta.jsp`
+  - Buat `dologin.php`
+  - Buat `login.jsp`
+  - Edit `index.jsp`
