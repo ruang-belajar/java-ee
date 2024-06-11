@@ -76,15 +76,20 @@
 
 
   ## Pertemuan 6:
-- Buat `data_mahasiswa.jsp`
-- Buat `form_mahasiswa.jsp`
-- Buat `data_dosen.jsp`
-- Buat `form_dosen.jsp`
-
-## Pertemuan 7: UTS
-
-## Pertemuan 8:
 - Buat `data_usersmahasiswa.jsp`
 - Buat `form_usersmahasiswa.jsp`
 - Buat `data_usersdosen.jsp`
 - Buat `form_usersdosen.jsp`
+
+## Pertemuan 7: UTS
+
+## Pertemuan 8:
+- Edit `index.jsp`
+  - Buat `login_dosen.jsp`
+  - Buat `dologin_dosen.jsp`
+  - Buat link dari index ke `data_usersmahasiswa.jsp`
+  - Buat link dari index ke `data_usersdosen.jsp`
+  - Tampilkan informasi login, dan link ke `login_dosen.jsp` dan `login_mahasiswa.jsp`
+- Tugas:
+  - Buat `login_mahasiswa.jsp`
+  - Buat `dologin_mahasiswa.jsp`

@@ -92,3 +92,8 @@
   - Buat `dologin.php`
   - Buat `login.jsp`
   - Edit `index.jsp`
+    - tambahkan link ke `data_peserta.jsp` dan `form_peserta.jsp`
+
+## Pertemuan 9:
+- Nilai `data_peserta.jsp`, `form_peserta.jsp`, `dologin.php` , `login.jsp`, `index.jsp`.
+- Implementasi CSS Framework Bootstrap
