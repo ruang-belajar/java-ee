@@ -93,3 +93,18 @@
 - Tugas:
   - Buat `login_mahasiswa.jsp`
   - Buat `dologin_mahasiswa.jsp`
+
+## Pertemuan 9:
+- Review HTML tags
+- Review [session](docs/session.md), [redirect](docs/redirect.md)
+- Review form `login.jsp`
+- Review CSS
+  - apply _style_
+  - tag `<style>`
+  - apply _class_
+- [Bootstrap CSS](docs/bootstrap.md) 
+  - apply `btn` ke menu di `index.jsp`
+  - apply `table` ke `data_dosen.jsp`
+- Latihan:
+  - Apply template ke halaman `login.jsp`
+  - Template: [bootsnipp.com](https://bootsnipp.com/)

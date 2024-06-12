@@ -95,5 +95,38 @@
     - tambahkan link ke `data_peserta.jsp` dan `form_peserta.jsp`
 
 ## Pertemuan 9:
-- Nilai `data_peserta.jsp`, `form_peserta.jsp`, `dologin.php` , `login.jsp`, `index.jsp`.
-- Implementasi CSS Framework Bootstrap
+- Review HTML tags
+- Review [session](docs/session.md), [redirect](docs/redirect.md)
+- Review form `login.jsp`
+- Review CSS
+  - apply _style_
+  - apply _class_
+- [Bootstrap CSS](docs/bootstrap.md) 
+  - apply `btn` ke menu di `index.jsp`
+  - apply `table` ke `data_dosen.jsp`
+- Latihan:
+  - Apply template ke halaman `login.jsp`
+  - Template: [bootsnipp.com](https://bootsnipp.com/)
+
+---
+
+## Pertemuan 10
+- halaman index:
+  - Data Mahasiswa
+  - Data Dosen
+  - Data Mata Kuliah
+  - Data Kelas
+- `data_kelas.jsp`
+- `form_kelas.jsp`
+  - edit kelas
+  - Tabel daftar peserta:
+  - Form:
+    - daftar mahasiswa:
+    - tombol: _Tambah Peserta_
+    - `tambah_peserta.jsp`
+
+## Pertemuan 11:
+- `form_peserta.jsp`: edit nilai
+
+## Pertemuan 12:
+- _Font Awesome_
