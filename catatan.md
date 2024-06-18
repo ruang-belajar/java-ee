@@ -112,4 +112,11 @@
 
   ## Pertemuan 10:
 - Review [session](docs/session.md), [redirect](docs/redirect.md)
+- Repositori [SIKampus2](https://github.com/ruang-belajar/SIKampus2)
 - Buat `logout.jsp`
+- Menampilkan waktu (Tanggal)
+  - Tampilkan dalam format (dd/mm/yyyy)
+  - Referensi [LocalDate](https://www.geeksforgeeks.org/java-time-localdate-class-in-java/)
+- Membuat `data_kelas.jsp` copas dari `data_dosen.jsp`
+- Tugas:
+  - Buat `form_kelas.jsp`
