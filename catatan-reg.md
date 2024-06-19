@@ -94,6 +94,8 @@
   - Edit `index.jsp`
     - tambahkan link ke `data_peserta.jsp` dan `form_peserta.jsp`
 
+---
+
 ## Pertemuan 9:
 - Review HTML tags
 - Review [session](docs/session.md), [redirect](docs/redirect.md)
@@ -108,7 +110,6 @@
   - Apply template ke halaman `login.jsp`
   - Template: [bootsnipp.com](https://bootsnipp.com/)
 
----
 
 ## Pertemuan 10
 - halaman index:
@@ -126,7 +127,15 @@
     - `tambah_peserta.jsp`
 
 ## Pertemuan 11:
-- `form_peserta.jsp`: edit nilai
+- buat `logout.jsp`
+- Perbaikan layout `index.jsp`
+- Review menyisipkan script Java pada file JSP
+- Prep `Kelas.java`
+  - Download: https://github.com/pujangga123/LatihanOOP/blob/main/src/kampus/Kelas.java
+- Buat form `data_kelas.jsp`
+- Buat table kelas
+- Tugas:
+  - Buat `form_kelas.jsp`
 
 ## Pertemuan 12:
 - _Font Awesome_
