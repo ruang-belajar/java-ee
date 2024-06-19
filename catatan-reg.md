@@ -129,13 +129,14 @@
 ## Pertemuan 11:
 - buat `logout.jsp`
 - Perbaikan layout `index.jsp`
-- Review menyisipkan script Java pada file JSP
-- Prep `Kelas.java`
-  - Download: https://github.com/pujangga123/LatihanOOP/blob/main/src/kampus/Kelas.java
+- Review menyisipkan script Java pada file JSP: Menampilkan waktu (Tanggal)
+  - Tampilkan dalam format (dd/mm/yyyy)
+  - Referensi [LocalDate](https://www.geeksforgeeks.org/java-time-localdate-class-in-java/)
+- Prep `Kelas.java` ([download file](https://github.com/ruang-belajar/SIKampus2/blob/persiapan/src/java/kampus/Kelas.java))
 - Buat form `data_kelas.jsp`
 - Buat table kelas
 - Tugas:
   - Buat `form_kelas.jsp`
 
 ## Pertemuan 12:
-- _Font Awesome_
+- 
