@@ -110,7 +110,7 @@
   - Buat `login_mahasiswa.jsp` dan `dologin_mahasiswa.jsp`
 
 
-  ## Pertemuan 10:
+## Pertemuan 10:
 - Review [session](docs/session.md), [redirect](docs/redirect.md)
 - Repositori [SIKampus2](https://github.com/ruang-belajar/SIKampus2)
 - Buat `logout.jsp`
@@ -120,3 +120,15 @@
 - Membuat `data_kelas.jsp` copas dari `data_dosen.jsp`
 - Tugas:
   - Buat `form_kelas.jsp`
+
+## Pertemuan 11:
+- Class [Kelas.java](https://github.com/ruang-belajar/SIKampus2/blob/persiapan/src/java/kampus/Kelas.java) dan [Peserta.java](https://github.com/ruang-belajar/SIKampus2/blob/persiapan/src/java/kampus/Peserta.java)
+- Buat `data_kelas.jsp`
+- Lengkapi `form_kelas.jsp`
+  - form tambah peserta
+  - form edit nilai peserta
+- buat `dotambah_peserta.jsp`: mendaftarkan peserta ke kelas
+- buat `doupdate_peserta.jsp`: update nilai di data peserta
+- tambahkan style `input-group`
+- Referensi CSS form:
+  - https://getbootstrap.com/docs/5.3/forms/input-group/#basic-example
