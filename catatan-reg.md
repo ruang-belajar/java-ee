@@ -139,4 +139,7 @@
   - Buat `form_kelas.jsp`
 
 ## Pertemuan 12:
-- 
+- Buat `data_peserta.jsp`
+  - Buat list link ke `form_peserta.jsp`
+- Buat `form_peserta.jsp`
+- tambahkan form _tambah peserta_ di `form_peserta.jsp`
