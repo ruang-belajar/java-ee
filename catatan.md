@@ -127,20 +127,20 @@
 - Lengkapi `form_kelas.jsp`
   - form tambah peserta
   - form edit nilai peserta
+- Referensi CSS form:
+  - https://getbootstrap.com/docs/5.3/forms/input-group/#basic-example
+
+
+## Pertemuan 12:
+- bahas `data_kelas.jsp`
+  - Tugas minggu lalu, menambahkan form tambah peserta
+  - Menyisipkan kode untuk menampilkan daftar peserta
 - buat `dotambah_peserta.jsp`: mendaftarkan peserta ke kelas
 - buat `doupdate_peserta.jsp`: update nilai di data peserta
 - Referensi CSS form:
   - https://getbootstrap.com/docs/5.3/forms/input-group/#basic-example
 
-## Pertemuan 12:
+## Pertemuan 13: ONLINE (Rencana)
 - Tugas buat `data_mahasiswa2.jsp`.
 - Update [Mahasiswa.java](https://github.com/pujangga123/LatihanOOP/blob/main/src/kampus/Mahasiswa.java)
 - Detail tugas: [Soal 6](latihan/soal6.md)
-
-## Pertemuan 13: Rencana
-- Lengkapi `form_kelas.jsp`
-  - form tambah peserta
-  - form edit nilai peserta
-- Tambahkan CSS setiap file JSP
-- Referensi CSS form:
-  - https://getbootstrap.com/docs/5.3/forms/input-group/#basic-example
