@@ -9,7 +9,8 @@ Coba buat file `data_mahasiswa2.jsp` dari kode program berikut:
     List<Mahasiswa> daftar = Mahasiswa.getList();
 %>
 <!DOCTYPE html>
-<html>    <head>
+<html>    
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Data Mahasiswa</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">

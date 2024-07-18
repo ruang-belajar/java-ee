@@ -140,7 +140,9 @@
 - Referensi CSS form:
   - https://getbootstrap.com/docs/5.3/forms/input-group/#basic-example
 
-## Pertemuan 13: ONLINE (Rencana)
+## Pertemuan 13: ONLINE
 - Tugas buat `data_mahasiswa2.jsp`.
 - Update [Mahasiswa.java](https://github.com/pujangga123/LatihanOOP/blob/main/src/kampus/Mahasiswa.java)
 - Detail tugas: [Soal 6](latihan/soal6.md)
+
+
