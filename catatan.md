@@ -5,6 +5,10 @@
 - Tugas, setup program:
   - XAMPP (Apache + Tomcat)
   - Netbeans
-  - JDK  
+  - JDK 
   - Referensi Tugas: https://github.com/ruang-belajar/java-ee/blob/master/docs/setup.md
   
+---
+
+## Pertemuan 2
+- 
