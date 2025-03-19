@@ -11,4 +11,7 @@
 ---
 
 ## Pertemuan 2
-- 
+- [Request Type](docs/request.md)
+- Latihan: Kerjakan _Soal 1_ dan _Soal 2_ dari [Latihan 1](latihan/latihan-01.md)
+- Tugas:
+  - Kerjakan _Soal 3_ dari [Latihan 1](latihan/latihan-01.md)
