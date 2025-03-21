@@ -22,7 +22,7 @@ file: `request1.jsp`
 </html>
 ```
 
-Buka halaman `request1.jsp` lewat URL: http://localhost:8080/BelajarJSP/request1.jsp?nama=Budi\
+Buka halaman `request1.jsp` lewat URL: http://localhost:8080/BelajarJSP/request1.jsp?nama=Budi
 `?nama=Budi` akan dibaca sebagai parameter data dengan _id_ `nama`. Data ini dibaca dengan perintah `request.getParameter("nama")`.
 
 ## Request Type POST
