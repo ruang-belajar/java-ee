@@ -18,11 +18,29 @@
   - [Input checkbox](https://sko.dev/referensi/html/form-input-checkbox)
 - Tugas: Kerjakan _Soal 3_ dari [Latihan 1](latihan/latihan-01.md)
 
----
 
 ## Pertemuan 3
+- Review tugas
 - Menggunakan [Session](docs/session.md)
 - Check [Latihan 2](latihan/latihan-02.md)
 - Menggunakan [Redirect](docs/redirect.md)
 - Latihan: Membuat form login
-  - Buat: `formlogin.jsp`, `login.jsp`, `home.jsp`, `logout.jsp`
+  - Buat project 
+  - Buat `formlogin.jsp`: menampilkan form login
+  - Buat `login.jsp`: memproses request login
+  - Buat `home.jsp`: halaman yang dibuka jika login berhasil.
+    - buat link ke `logout.jsp`
+  - Buat `logout.jsp`: proses logout. Redirect ke `formlogin.jsp` di akhir proses.
+- Tugas:
+  - Edit `home.jsp`
+    - Jika user akses ke halaman ini dalam kondisi belum login, maka redirect ke `formlogin.jsp`
+  - Tambahkan bootstrap pada `formlogin.jsp`. Tambahkan class `form-control` ke elemen _username_ dan _password_
+  - Setup Github
+    - Buat akun github (jika belum ada)
+    - Download & install Github
+
+---
+
+## Pertemuan 4
+- Review Tugas
+- Setup Github Assignment
