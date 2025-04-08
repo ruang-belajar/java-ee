@@ -10,7 +10,7 @@
   
 
 ## Pertemuan 2
-- [Request Type](docs/request.md)- 
+- [Request Type](docs/request.md)
 - Latihan: Kerjakan _Soal 1_ dan _Soal 2_ dari [Latihan 1](latihan/latihan-01.md)
 - Referensi HTML
   - [Membuat listbox](https://tutorasr.blogspot.com/2017/03/membuat-listbox-di-html-dengan-mudah.html)
@@ -34,7 +34,7 @@
 - Tugas:
   - Edit `home.jsp`
     - Jika user akses ke halaman ini dalam kondisi belum login, maka redirect ke `formlogin.jsp`
-  - Tambahkan bootstrap pada `formlogin.jsp`. Tambahkan class `form-control` ke elemen _username_ dan _password_
+  - Tambahkan tanggal dan jam saat ini di `home.jsp` dalam format `yyyy-MM-dd hh:mm`
   - Setup Github
     - Buat akun github (jika belum ada)
     - Download & install Github
@@ -44,3 +44,7 @@
 ## Pertemuan 4
 - Review Tugas
 - Setup Github Assignment
+- [Standard Class](docs/standard-class.md)
+- Latihan: [Latihan 3 - Soal 1](latihan/latihan-03.md)
+- Tugas: [Latihan 3 - Soal 2](latihan/latihan-03.md)
+    
