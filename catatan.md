@@ -24,27 +24,40 @@
 - Menggunakan [Session](docs/session.md)
 - Check [Latihan 2](latihan/latihan-02.md)
 - Menggunakan [Redirect](docs/redirect.md)
+- Setup Github
+  - Buat akun github (jika belum ada)
+  - Download & install Github
 - Latihan: Membuat form login
   - Buat project 
   - Buat `formlogin.jsp`: menampilkan form login
   - Buat `login.jsp`: memproses request login
+    - simpan username di session
   - Buat `home.jsp`: halaman yang dibuka jika login berhasil.
+    - Tampilkan username
     - buat link ke `logout.jsp`
-  - Buat `logout.jsp`: proses logout. Redirect ke `formlogin.jsp` di akhir proses.
 - Tugas:
+  - Buat `logout.jsp`: proses logout. Redirect ke `formlogin.jsp` di akhir proses.
   - Edit `home.jsp`
     - Jika user akses ke halaman ini dalam kondisi belum login, maka redirect ke `formlogin.jsp`
-  - Tambahkan tanggal dan jam saat ini di `home.jsp` dalam format `yyyy-MM-dd hh:mm`
-  - Setup Github
-    - Buat akun github (jika belum ada)
-    - Download & install Github
-
+  
 ---
 
 ## Pertemuan 4
 - Review Tugas
 - Setup Github Assignment
 - [Standard Class](docs/standard-class.md)
+- Diskusi:
+  - Check [Java - API Spesification]((https://docs.oracle.com/javase/8/docs/api/overview-summary.html))
+    - Kapan kita menggunakan package berikut:
+      - java.io
+      - java.sql
+      - java.util
+      - java.text
+      - java.awt
+      - java.swing
+  - Check [Dokumentasi Java - Date](https://docs.oracle.com/javase/8/docs/api/java/util/Date.html)
+    - Apa saja class dan method yang bisa Anda kenali fungsinya?
+    - Apa yang dimaksud dengan fungsi yang ditandai "deprecated" ?
 - Latihan: [Latihan 3 - Soal 1](latihan/latihan-03.md)
 - Tugas: [Latihan 3 - Soal 2](latihan/latihan-03.md)
     
