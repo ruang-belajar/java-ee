@@ -60,4 +60,9 @@
     - Apa yang dimaksud dengan fungsi yang ditandai "deprecated" ?
 - Latihan: [Latihan 3 - Soal 1](latihan/latihan-03.md)
 - Tugas: [Latihan 3 - Soal 2](latihan/latihan-03.md)
+
+## Pertemuan 5
+- User defined class
+- Membuat array dari class
+- Menampilkan elemen dari array
     
