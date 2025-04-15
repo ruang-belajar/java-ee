@@ -62,7 +62,51 @@
 - Tugas: [Latihan 3 - Soal 2](latihan/latihan-03.md)
 
 ## Pertemuan 5
-- User defined class
+- [User defined class](docs/user-defined-class.md)
 - Membuat array dari class
 - Menampilkan elemen dari array
+- Tugas:
+  - Soal 1: Buat program (file: classuser5.jsp) untuk mencetak array daftar menggunakan perintah while
+  - Soal 2: Buat program (file: classuser6.jsp) untuk mencetak array daftar menjadi bentuk dropdown atau listbox
+  - Soal 3: Buat program (file: classuser7.jsp) untuk mencetak array daftar menjadi bentuk ordered list `<ol>` atau unordered list `<ul>`.
+  - Soal 4: Buat program (file: classuser8.jsp) untuk mencetak array daftar menjadi bentuk tabel. Untuk masing-masing baris, tambahkan nomor baris.
+
     
+## Pertemuan 6
+- Review Tugas
+- [JSTL + EL](docs/jstl-el.md)
+- Download file berikut, dan coba untuk jalankan
+  - JSP (copy ke folder Web Pages)
+    - [controller2.jsp](https://github.com/ruang-belajar/java-ee/blob/master/src/controller2.jsp)
+    - [view2.jsp](https://github.com/ruang-belajar/java-ee/blob/master/src/view2.jsp)
+  - Class (copy ke package)
+    - [Siswa.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Siswa.class)
+    - [Daftar.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Daftar.class)
+  - Jangan lupa untuk rubah nama package sesuai project
+
+- Diskusi:
+  - Apa yang dimaksud dengan model MVC?
+  - Bisakah Anda menentukan mana bagian _Model_, _Controller_ dan _View_ dari contoh program sebelumnya?
+  - Apa fungsi perintah berikut pada `controller1.jsp`?
+    ```java
+    request.setAttribute("siswa", siswa);
+    request.setAttribute("nilai", nilai);
+    request.setAttribute("daftarsiswa", daftar.getList());
+    ```
+  - Apa fungsi perintah berikut pada `controller1.jsp`?
+    ```java
+    RequestDispatcher dispacher = request.getRequestDispatcher("view2.jsp");
+    dispacher.forward(request, response);
+    ```
+  - Pada view2.jsp, bagian mana yang disebut EL?
+  - Apa saja kegunaan tag `<c:out>` `<c:if>` `<c:forEach>`
+  - Selain tag tersebut, tag JTSL apa saja yang Anda bisa temukan di internet? Apa kegunaannya?
+- Latihan:
+  - Rubah file pada latihan sebelumnya dengan mengimplementasi model MVC dan menggunakan JSTL
+  - Rubah `classuser2.jsp` menjadi `classuser2controller.jsp` dan `classuser2view.jsp`.
+  - Opsional: Daftar user bisa dibuat menjadi class terpisah, misal: `DaftarUser`. (lihat kembali file `Daftar.class` pada contoh yang kita pelajari tadi)
+- Tugas:
+  - Rubah `classuser8.jsp` pada tugas minggu lalu menjadi bentuk MVC menggunakan JSTL
+  - File: `classuser8controller.jsp`, `classuser8view.jsp`
+
+

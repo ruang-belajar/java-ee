@@ -8,7 +8,8 @@
 6. [Session](session.md)
 7. [Redirect](redirect.md)
 8. [Standard Class](standard-class.md)
-9. [Bootstrap: CSS Framework](bootstrap.md)
+9. [JSTL + EL](jstl-el.md)
+10. [Bootstrap: CSS Framework](bootstrap.md)
 
 ## Contoh Project
 1. [pujangga123/LatihanJSP](https://github.com/pujangga123/LatihanJSP)
