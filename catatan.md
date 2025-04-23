@@ -60,7 +60,7 @@
 - Tugas: [Latihan 3 - Soal 2](latihan/latihan-03.md)
 
 ## Pertemuan 5
-- [Array](docs/10-array.md)
+- [Array](https://github.com/ruang-belajar/java/blob/main/docs/10-array.md)
   - Membuat array dari class
   - Menampilkan elemen dari array
 - [User defined class](docs/user-defined-class.md)
