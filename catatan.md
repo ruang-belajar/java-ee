@@ -65,16 +65,16 @@
   - Menampilkan elemen dari array
 - [User defined class](docs/user-defined-class.md)
   - [User.java](src/User.java)
-  - [classuser1.java](src/classuser1.jsp)
-  - [classuser2.java](src/classuser2.jsp)
-  - [classuser3.java](src/classuser3.jsp)
-  - [classuser4.java](src/classuser4.jsp)
+  - [classuser1.jsp](src/classuser1.jsp)
+  - [classuser2.jsp](src/classuser2.jsp)
+  - [classuser3.jsp](src/classuser3.jsp)
+  - [classuser4.jsp](src/classuser4.jsp)
 - Latihan:
-  - Soal 1: Berdasarkan `classuser3.java`, buat program (file: `classuser5.jsp`) untuk mencetak array daftar menggunakan perintah `while`
-  - Soal 2: Berdasarkan `classuser3.java`, buat program (file: `classuser6.jsp`) untuk mencetak array daftar menjadi bentuk _dropdown_ atau _listbox_
+  - Soal 1: Berdasarkan `classuser3.java`, buat program (file: `classuser5.jsp`) untuk mencetak array `daftar` menggunakan perintah `while`
+  - Soal 2: Berdasarkan `classuser3.java`, buat program (file: `classuser6.jsp`) untuk mencetak array `daftar` menjadi bentuk _dropdown_ atau _listbox_
 - Tugas:
-  - Soal 1: Berdasarkan `classuser3.java`, buat program (file: `classuser7.jsp`) untuk mencetak array daftar menjadi bentuk _ordered list_ `<ol>` atau _unordered list_ `<ul>`.
-  - Soal 2: Berdasarkan `classuser3.java`, buat program (file: `classuser8.jsp`) untuk mencetak array daftar menjadi bentuk tabel. Untuk masing-masing baris, tambahkan nomor baris.
+  - Soal 1: Berdasarkan `classuser3.java`, buat program (file: `classuser7.jsp`) untuk mencetak array `daftar` menjadi bentuk _ordered list_ `<ol>` atau _unordered list_ `<ul>`.
+  - Soal 2: Berdasarkan `classuser3.java`, buat program (file: `classuser8.jsp`) untuk mencetak array `daftar` menjadi bentuk tabel. Untuk masing-masing baris, tambahkan nomor baris.
 
 ---
     
