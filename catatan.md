@@ -40,8 +40,6 @@
   - Edit `home.jsp`
     - Jika user akses ke halaman ini dalam kondisi belum login, maka redirect ke `formlogin.jsp`
   
----
-
 ## Pertemuan 4
 - Review Tugas
 - Setup Github Assignment
@@ -62,15 +60,23 @@
 - Tugas: [Latihan 3 - Soal 2](latihan/latihan-03.md)
 
 ## Pertemuan 5
+- [Array](docs/10-array.md)
+  - Membuat array dari class
+  - Menampilkan elemen dari array
 - [User defined class](docs/user-defined-class.md)
-- Membuat array dari class
-- Menampilkan elemen dari array
+  - [User.java](src/User.java)
+  - [classuser1.java](src/classuser1.jsp)
+  - [classuser2.java](src/classuser2.jsp)
+  - [classuser3.java](src/classuser3.jsp)
+  - [classuser4.java](src/classuser4.jsp)
+- Latihan:
+  - Soal 1: Berdasarkan `classuser3.java`, buat program (file: `classuser5.jsp`) untuk mencetak array daftar menggunakan perintah `while`
+  - Soal 2: Berdasarkan `classuser3.java`, buat program (file: `classuser6.jsp`) untuk mencetak array daftar menjadi bentuk _dropdown_ atau _listbox_
 - Tugas:
-  - Soal 1: Buat program (file: classuser5.jsp) untuk mencetak array daftar menggunakan perintah while
-  - Soal 2: Buat program (file: classuser6.jsp) untuk mencetak array daftar menjadi bentuk dropdown atau listbox
-  - Soal 3: Buat program (file: classuser7.jsp) untuk mencetak array daftar menjadi bentuk ordered list `<ol>` atau unordered list `<ul>`.
-  - Soal 4: Buat program (file: classuser8.jsp) untuk mencetak array daftar menjadi bentuk tabel. Untuk masing-masing baris, tambahkan nomor baris.
+  - Soal 1: Berdasarkan `classuser3.java`, buat program (file: `classuser7.jsp`) untuk mencetak array daftar menjadi bentuk _ordered list_ `<ol>` atau _unordered list_ `<ul>`.
+  - Soal 2: Berdasarkan `classuser3.java`, buat program (file: `classuser8.jsp`) untuk mencetak array daftar menjadi bentuk tabel. Untuk masing-masing baris, tambahkan nomor baris.
 
+---
     
 ## Pertemuan 6
 - Review Tugas
