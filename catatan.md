@@ -76,11 +76,29 @@
   - Soal 1: Berdasarkan `classuser3.java`, buat program (file: `classuser7.jsp`) untuk mencetak array `daftar` menjadi bentuk _ordered list_ `<ol>` atau _unordered list_ `<ul>`.
   - Soal 2: Berdasarkan `classuser3.java`, buat program (file: `classuser8.jsp`) untuk mencetak array `daftar` menjadi bentuk tabel. Untuk masing-masing baris, tambahkan nomor baris.
 
----
     
 ## Pertemuan 6
 - Review Tugas
 - [JSTL + EL](docs/jstl-el.md)
+
+- Diskusi:
+  - Apa saja kegunaan tag `<c:out>` `<c:if>` `<c:forEach>`
+  - Selain tag tersebut, tag JTSL apa saja yang Anda bisa temukan di internet? Apa kegunaannya?
+- Latihan:
+  - Rubah file pada latihan sebelumnya dengan mengimplementasi model MVC dan menggunakan JSTL
+  - Rubah `classuser2.jsp` menjadi `classuser2controller.jsp` dan `classuser2view.jsp`.
+  - Opsional: Daftar user bisa dibuat menjadi class terpisah, misal: `DaftarUser`. (lihat kembali file `Daftar.class` pada contoh yang kita pelajari tadi)
+- Tugas:
+  - Rubah `classuser8.jsp` pada tugas minggu lalu menjadi menggunakan JSTL.
+  - Tambahkan `public Integer gaji` pada class `User` dan lakukan perubahan yang diperlukan pada bagian _constructor_ (lihat kode `User.java` di [JSTL + EL](docs/jstl-el.md) )
+  - Tampilkan _gaji_ sebagai kolom baru pada tabel
+  - Format tampilan, tambahkan _formatNumber_ pada tampilan _gaji_, sehingga tampilan menjadi seperti berikut:\
+    ![](latihan/res/jstl-1.png)
+  - Simpan dengan nama file `classuser8b.jsp`
+
+---
+
+# Pertemuan 7
 - Download file berikut, dan coba untuk jalankan
   - JSP (copy ke folder Web Pages)
     - [controller2.jsp](https://github.com/ruang-belajar/java-ee/blob/master/src/controller2.jsp)
@@ -89,7 +107,6 @@
     - [Siswa.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Siswa.class)
     - [Daftar.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Daftar.class)
   - Jangan lupa untuk rubah nama package sesuai project
-
 - Diskusi:
   - Apa yang dimaksud dengan model MVC?
   - Bisakah Anda menentukan mana bagian _Model_, _Controller_ dan _View_ dari contoh program sebelumnya?
@@ -105,14 +122,3 @@
     dispacher.forward(request, response);
     ```
   - Pada view2.jsp, bagian mana yang disebut EL?
-  - Apa saja kegunaan tag `<c:out>` `<c:if>` `<c:forEach>`
-  - Selain tag tersebut, tag JTSL apa saja yang Anda bisa temukan di internet? Apa kegunaannya?
-- Latihan:
-  - Rubah file pada latihan sebelumnya dengan mengimplementasi model MVC dan menggunakan JSTL
-  - Rubah `classuser2.jsp` menjadi `classuser2controller.jsp` dan `classuser2view.jsp`.
-  - Opsional: Daftar user bisa dibuat menjadi class terpisah, misal: `DaftarUser`. (lihat kembali file `Daftar.class` pada contoh yang kita pelajari tadi)
-- Tugas:
-  - Rubah `classuser8.jsp` pada tugas minggu lalu menjadi bentuk MVC menggunakan JSTL
-  - File: `classuser8controller.jsp`, `classuser8view.jsp`
-
-

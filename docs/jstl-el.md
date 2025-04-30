@@ -13,86 +13,58 @@ Untuk bisa menggunakan JSTL, Anda perlu menambahkan library JSTL ini ke dalam pr
 ## Contoh JSTL + EL
 Berikut ini contoh penggunaan JSTL juga implementasi class yang akses oleh halaman JSP lewat JSTL.
 
-file: **Siswa.class**
+file: **User.java**
 ```java
 package belajarjsp;
 
-public class Siswa {
-    // untuk bisa diakses JSTL, setiap properti harus memiliki fungsi getter
-    // supaya ia bisa dibaca
-    // harus memiliki fungsi setter, jika diijinkan bisa dirubah
-    private String nip;
-    private String nama;
+public class User {
+    public String namaDepan;
+    public String namaBelakang;
+    public String jenisKelamin;
+    public Integer gaji;
     
-    public Siswa(String nip, String nama) {
-        this.nip = nip;
-        this.nama = nama;
-    }
-
-    // fungsi getter nip
-    public String getNip() {
-        return nip;
-    }
-
-    // fungsi getter nama
-    public String getNama() {
-        return nama;
+    public User(String namaDepan, String namaBelakang, String jenisKelamin, Integer gaji) {
+        this.namaDepan = namaDepan;
+        this.namaBelakang = namaBelakang;
+        this.jenisKelamin = jenisKelamin;
+        this.gaji = gaji;
     }
     
-    // fungsi setter nip
-    public void setNip(String nip) {
-        this.nip = nip;
+    public String namaLengkap() {
+        return this.namaDepan+" "+this.namaBelakang;
     }
 
-    // fungsi setter nama
-    public void setNama(String nama) {
-        this.nama = nama;
+    public String getJenisKelamin() {
+        return this.jenisKelamin;
     }
+
+    public Integer getGaji() {
+        return this.gaji;
+    }
+
 }
 ```
 
-file:**Daftar**
-```java
-package belajarjsp;
-
-import java.util.ArrayList;
-import java.util.List;
-
-// class contoh untuk generate daftar siswa
-public class Daftar {
-    public List<Siswa> getList() {
-        List<Siswa> list = new ArrayList<>();
-
-        list.add(new Siswa("111", "Budi"));
-        list.add(new Siswa("222", "Yuda"));
-        list.add(new Siswa("333", "Dyah"));
-
-        return list;
-    }
-}
-```
-
-file: **controller1.jsp**
+file: **jstlel.jsp**
 ```jsp
-<%@page import="belajarjsp.Siswa"%>
-<%@page import="belajarjsp.Daftar"%>
+<%@page import="belajarjsp.User"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    Daftar daftar = new Daftar();
-    Siswa siswa = new Siswa("555", "Rudi");
+    User siswa = new User("Budi", "Raharjo", "L", 3000000);
     Integer nilai = 70;
-    
+
+    User[] daftar = {
+        new User("Ayu", "Dyah", "P", 3000000),
+        new User("Yuda", "Darmawan", "L", 4000000),
+        new User("Laura", "Himawan", "P", 5000000)
+    };
+
     // set attribut
     request.setAttribute("siswa", siswa);
     request.setAttribute("nilai", nilai);
-    request.setAttribute("daftarsiswa", daftar.getList());
+    request.setAttribute("daftarsiswa", daftar);
 %>
-```
-
-file: **view1.jsp**
-```jsp
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="controller1.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -101,10 +73,13 @@ file: **view1.jsp**
     </head>
     <body>
         <!-- Expression Language -->
-        EL: ${siswa.nama}<br>
-        
+        EL: ${siswa.namaLengkap()}<br>
+        <br>
+
         <!-- c:out -->
-        <c:out value="${siswa.nama}" /><br>
+        <c:out value="${siswa.namaLengkap()}" /><br>
+
+        <br>
         
         <!-- c:if -->
         <!-- perintah c:if tidak support ELSE -->
@@ -114,12 +89,14 @@ file: **view1.jsp**
         <c:if test="${nilai<=70}">
             KAMU TIDAK LULUS<br>
         </c:if>
-        
+
+        <br>
+
         <!-- c:forEach -->
         <c:forEach var="row" items="${daftarsiswa}">
-            ${row.nama}<br>
+            ${row.namaLengkap()} - ${row.jenisKelamin} -  ${row.gaji}<br>
         </c:forEach>
-                
+
     </body>
 </html>
 ```
