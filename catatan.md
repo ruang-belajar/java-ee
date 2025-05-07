@@ -96,16 +96,16 @@
     ![](latihan/res/jstl-1.png)
   - Simpan dengan nama file `classuser8b.jsp`
 
----
-
 # Pertemuan 7
+- Review tugas
+- [MVC](docs/mvc.md)
 - Download file berikut, dan coba untuk jalankan
   - JSP (copy ke folder Web Pages)
     - [controller2.jsp](https://github.com/ruang-belajar/java-ee/blob/master/src/controller2.jsp)
     - [view2.jsp](https://github.com/ruang-belajar/java-ee/blob/master/src/view2.jsp)
   - Class (copy ke package)
-    - [Siswa.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Siswa.class)
-    - [Daftar.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Daftar.class)
+    - [Siswa.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Siswa.java)
+    - [Daftar.class](https://github.com/ruang-belajar/java-ee/blob/master/src/Daftar.java)
   - Jangan lupa untuk rubah nama package sesuai project
 - Diskusi:
   - Apa yang dimaksud dengan model MVC?
@@ -121,4 +121,10 @@
     RequestDispatcher dispacher = request.getRequestDispatcher("view2.jsp");
     dispacher.forward(request, response);
     ```
-  - Pada view2.jsp, bagian mana yang disebut EL?
+  - Pada `view2.jsp`, bagian mana yang disebut EL?
+- Latihan: Simpan `classuser8b.jsp` menjadi bentuk MVC dengan nama file `classuser8c.jsp` dan `classuser8c.view.jsp`.
+- Latihan:
+  - buat folder [mcv]
+  - download [formlogin.jsp](src/formlogin.jsp) dan [login.jsp](src/login.jsp)
+  - buat file `home.jsp` dan `error.jsp`
+---

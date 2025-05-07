@@ -31,7 +31,7 @@ MVC adalah sebuah arsitektur perangkat lunak yang digunakan untuk memisahkan log
 ## Struktur File
 Dalam pelajaran ini, kita akan menggunakan formulasi berikut untuk membuat halaman web kita menggunakan model MVC.
 
-Dalam contoh ini kita menggunakan class `Site` sebagai model, `home.jsp` sebagai controller untuk halaman _home_. Untuk _view_ kita menggunakan sufix `.view.jsp` sehingga _view_ untuk `home.jsp` adalah `home.view.jsp`.
+Dalam contoh ini kita menggunakan class `Site` sebagai model, `home.jsp` sebagai controller untuk halaman _home_. Untuk _view_ kita menggunakan _sufix_ `.view.jsp` sehingga _view_ untuk `home.jsp` adalah `home.view.jsp`.
 
 file: `Site.class` diletakan di _package_ (contoh _belajarjsp_, sesuaikan dengan project Anda)
 ```java
