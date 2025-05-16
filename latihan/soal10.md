@@ -1,15 +1,44 @@
 # Soal 10
 
-Dengan menggunakan design MVC, buat website seperti berikut:
+File: `controller3.jsp`
+```jsp
+<%
+    Integer panjang = 10;
+    Integer lebar = 20;
+    Integer luas = panjang * lebar;
+    
+    request.setAttribute("panjang", panjang);
+    request.setAttribute("lebar", lebar);
+    request.setAttribute("luas", luas);
+    
+    RequestDispatcher dispacher = request.getRequestDispatcher("____(a)____");
+    dispacher.forward(request, response);
+%>
+```
 
-`home.jsp` & `home.view.jsp`\
-form meminta input nama, kemudian mengirimkannya ke `form.jsp`\
-![](res/quiz1-1.PNG)
+File: `view3.jsp`
+```jsp
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Soal 3</title>
+    </head>
+    <body>
+        Luar Persegi:<br>
+        Panjang x Lebar = Luas<br>
+        _____(b)_____
 
-`form.jsp` & `form.view.jsp`\
-Memproses data yang di-POST (dari `home`), menyimpannya dalam session, kemudian menampilkan form untuk pemesanan. Kirim data dari form ke `order.jsp`.\
-![](res/quiz1-2.PNG)    
+    </body>
+</html>
+```
 
-`order.jsp` & `order.view.jsp`\
-Memproses data yang di-POST dan menampilkannya. Tambahkan link _Tambah Pesanan_ yang mengarah ke `form.jsp`.\
-![](res/quiz1-3.PNG)
+**Soal 1:**<br>
+Lengkapi **(a)** sehingga ketika membuka halaman `controller3.jsp` akan muncul:
+```
+Luar Persegi:
+Panjang x Lebar = Luas
+10 x 20 = 200
+```
