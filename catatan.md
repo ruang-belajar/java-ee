@@ -98,7 +98,7 @@
 
 ---
 
-# Pertemuan 7
+## Pertemuan 7
 - Download file berikut, dan coba untuk jalankan
   - JSP (copy ke folder Web Pages)
     - [controller2.jsp](https://github.com/ruang-belajar/java-ee/blob/master/src/controller2.jsp)
@@ -122,3 +122,14 @@
     dispacher.forward(request, response);
     ```
   - Pada view2.jsp, bagian mana yang disebut EL?
+
+## Pertemuan 8
+- UTS
+
+## Pertemuan 9
+- [CRUD](docs/crud.md)
+- Setelah mengikuti pembahasan pada [CRUD](docs/crud.md), coba kerjakan latihan berikut:
+  - Tambahkan method `update()` pada class `Mahasiswa` yang berfungsi eksekusi perintah `UPDATE` untuk merubah record. Buat file `mahasiswa.update.jsp` untuk mencontohkan penggunaan fungsi.
+  - Tambahkan method `baca(nim)` pada class `Mahasiswa` yang berfungsi membaca data dari tabel `mahasiswa` dan menyimpannya ke property `nim`, `nama`, `nilai`. Buat file `mahasiswa.baca.jsp` untuk mencontohkan penggunaan fungsi. 
+- Tugas:
+  - Mengikuti metode MVC, rubah `mahasiswa.tambah.jsp`, `mahasiswa.update.jsp`, `mahasiswa.baca.jsp` sehingga output ditampilkan menggunakan _view_, masing-masing dengan nama `mahasiswa.tambah.view.jsp`, `mahasiswa.update.view.jsp`, `mahasiswa.baca.view.jsp`
