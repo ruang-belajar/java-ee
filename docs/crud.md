@@ -139,6 +139,8 @@ Setup database contoh, buat database `test` kemudian eksekusi script [test.sql](
 
 ## Contoh eksekusi INSERT & _Parameter Query_
 
+_Parameter Query_ adalah cara lain kita menyiapkan nilai-nilai yang kita akan olah ke dalam perintah SQL. Perhatikan contoh program berikut:
+
 ```jsp
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
