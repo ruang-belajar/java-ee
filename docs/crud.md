@@ -47,7 +47,7 @@ Kita akan coba membuat koneksi sederhana dengan membaca dan menampilkan data dar
         // eksekusi query
         rs = st.executeQuery("SELECT * FROM daftar");
     } catch (Exception e) {
-        out.println("Error")
+        out.println("Error");
     }
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
