@@ -200,7 +200,7 @@ _Parameter Query_ adalah cara lain kita menyiapkan nilai-nilai yang kita akan ol
 
 Pada model MVC, tentu kita mau misahkan proses akses ke database dari controller dan view. Berikut akses database lewat class.
 
-> ⚠ Pada contoh berikut, kita akan membuat folder khusus yang diberi `crud` untuk menyimpan class kita. Ingat, class disimpan di folder berbeda dengan halaman JSP kita.
+> ⚠ Pada contoh berikut, kita akan membuat folder khusus yang diberi nama `crud` untuk menyimpan class kita. Ingat, class disimpan di folder berbeda dengan halaman JSP kita.
 
 file: `Source Package/crud/Mahasiswa.java`
 ```java
