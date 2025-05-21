@@ -15,12 +15,11 @@ Selain tentu selain menyiapkan database MySQL-nya itu sendiri, hal yang perlu ki
    2. Add _JAR/Folder_
    3. Pilih file _jar_ yang sebelumnya kita _extract_\
       ![](res/crud-1.JPG)
+4. Untuk latihan ini kita akan menggunakan database MySQL. Persiapkan database  `test` kemudian eksekusi script [test.sql](../src/test.sql)
 
 ## Cara sederhana membaca tabel
 
 Kita akan coba membuat koneksi sederhana dengan membaca dan menampilkan data dari database ke halaman JSP kita.
-
-Setup database contoh, buat database `test` kemudian eksekusi script [test.sql](../src/test.sql)
 
 ```jsp
 <%@ page import="java.sql.*" %>
@@ -266,3 +265,4 @@ File: `mahasiswa.tambah.jsp`
 **Perhatikan:**
 - Coba ekskusi `mahasiswa.tambah.jsp`, maka record baru akan ditambahkan ke tabel `mahasiswa`.
 - Method `tambah()` dibuat sebagai fungsi `boolean` supaya bisa bisa memberikan nilai `true` jika proses `INSERT` berhasil, `false` jika gagal.
+
