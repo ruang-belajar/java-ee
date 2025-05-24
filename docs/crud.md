@@ -196,7 +196,7 @@ _Parameter Query_ adalah cara lain kita menyiapkan nilai-nilai yang kita akan ol
 - `PreparedStatement st` berbeda dengan sebelumnya `Statement st`. `PreparedStatement` memungkinkan kita memanggil query menggunakan _parameter_. Perhatikan pada, kita menyisipkan tanda `?`. 
 - Tanda `?` ini kita bisa beri nilai menggunakan perintah `st.setString()`. Sesuai dengan urutannya, `st.setString(1,nim)` berarti mengisi `?` pertama pada query dengan `nim`, dan seterusnya.
 
-## Akses ke Database Lewat Database
+## Akses ke Database Lewat Class
 
 Pada model MVC, tentu kita mau misahkan proses akses ke database dari controller dan view. Berikut akses database lewat class.
 
