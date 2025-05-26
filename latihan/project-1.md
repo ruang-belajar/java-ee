@@ -57,11 +57,11 @@ Pelajari class diagram berikut
             -String barangId
             -Integer qty
             -Integer harga
-            +String getBarangId();
-            +String getBarangNama();
-            +String getQty();
-            +String getHarga();
-            +String getTotal();
+            +String getBarangId()
+            +String getBarangNama()
+            +String getQty()
+            +String getHarga()
+            +String getTotal()
             +boolean add(String salesId, String barangId, Integer qty, Integer harga)
             +boolean baca(String id)
             +Array<SalesDetail> loadDetail(String salesId)
@@ -78,22 +78,32 @@ Pelajari class diagram berikut
             +boolean hapus()
         }
         class Stock {
-            +String id
-            +Datetime waktu
-            +String username
+            -String id
+            -Datetime waktu
+            -String username
+            +Datetime getWaktu()
+            +String getUsername()
             +boolean baca(String id)
             +boolean tambah(String username)
             +boolean hapus()
             +boolean addDetail(String barangId, Integer qty, Integer harga)
             +Array<SalesDetail> detail
-            -void loadDetail()
+            -void bacaDetail()
         }
         class StockDetail {
-            +String id
-            +String barangId
-            +Integer qty
-            +Integer harga
-            +String getBarangNama();
+            -String id
+            -String barangId
+            -Integer qty
+            -Integer harga
+            +String getBarangId()
+            +String getBarangNama()
+            +String getQty()
+            +String getHarga()
+            +String getTotal()
+            +boolean add(String salesId, String barangId, Integer qty, Integer harga)
+            +boolean baca(String id)
+            +Array<SalesDetail> loadDetail(String salesId)
+            +boolean hapus()
         }
 
 ```
