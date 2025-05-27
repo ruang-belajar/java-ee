@@ -17,6 +17,12 @@ Buat database sebagai berikut:
 
 ![](res/project-1-1.png)
 
+Pada fase ini, prioritaskan membuat tabel `users`, sisipkan 1 user secara manual:
+```sql
+INSERT INTO `users` (`username`, `fullname`, `password`) VALUES
+('admin', 'Administrator', '202cb962ac59075b964b07152d234b70');
+```
+
 ### Class Diagram
 
 Pelajari class diagram berikut
@@ -434,4 +440,11 @@ file: `home.view.jsp`
 ```
 
 ### Soal Latihan:
-Berdasarkan class diagram, buat class `Barang` dan buat `baranglist.jsp`, `baranglist.view.jsp`
+- Buat `userlist.jsp` dan `userlist.view.jsp`:
+  - menampilkan list user (gunakan `User.getList()` untuk mengambil list user)
+  - link yang mengarah ke `formusertambah.jsp`
+- Buat `login.jsp`, `formusertambah.jsp` dan `formusertambah.view.jsp`:
+  - form tambah user, terdiri dari: _username_, _fullname_, _password_
+  - form action mengarah ke `login.jsp`
+  - jika login berhasil, redirect ke `home.jsp`, jika login gagal, redirect ke `formlogin.jsp`
+
