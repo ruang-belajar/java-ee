@@ -133,3 +133,8 @@
   - Tambahkan method `baca(nim)` pada class `Mahasiswa` yang berfungsi membaca data dari tabel `mahasiswa` dan menyimpannya ke property `nim`, `nama`, `nilai`. Buat file `mahasiswa.baca.jsp` untuk mencontohkan penggunaan fungsi. 
 - Tugas:
   - Mengikuti metode MVC, rubah `mahasiswa.tambah.jsp`, `mahasiswa.update.jsp`, `mahasiswa.baca.jsp` sehingga output ditampilkan menggunakan _view_, masing-masing dengan nama `mahasiswa.tambah.view.jsp`, `mahasiswa.update.view.jsp`, `mahasiswa.baca.view.jsp`
+
+
+## Pertemuan 10
+- Review tugas
+- [Project Toko ATK - Fase 1](latihan/project-1.md)

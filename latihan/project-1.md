@@ -10,12 +10,14 @@ Operator toko ATK ini ada lebih dari satu, masing-masing punya username dan pass
 
 > ℹ Untuk project ini kita akan menggunakan folder `tokoatk` pada _Web Pages_ dan _Source Packages_
 
-## Setup Database
+## Fase 1
+
+### Setup Database
 Buat database sebagai berikut:
 
 ![](res/project-1-1.png)
 
-## Class Diagram
+### Class Diagram
 
 Pelajari class diagram berikut
 
@@ -28,35 +30,36 @@ Pelajari class diagram berikut
         SalesDetail -- Barang
         Stock -- StockDetail
         class User {
-            -String username
-            -String fullname
+            +String username
+            +String fullname
             +boolean login(String username, String password)
             +String getFullname()
             +String getUsername()
             +boolean baca(String id)
-            +boolean updateNama()
+            +boolean update()
             +boolean updatePassword(String password)
-            +boolean tambah(String password)
             +boolean hapus()
+            +boolean tambah(String password)$
+            +ArrayList<User> getList()$
         }
         class Sales {
-            -String id
-            -Datetime waktu
-            -String username
+            +String id
+            +Datetime waktu
+            +String username
             +Datetime getWaktu()
+            +String getId()
             +String getUsername()
             +boolean baca(String id)
             +boolean tambah(String username)
             +boolean hapus()
             +boolean addDetail(String barangId, Integer qty, Integer harga)
-            +Array<SalesDetail> detail
-            -void bacaDetail()
+            +ArrayList<SalesDetail> getList()$
         }
         class SalesDetail {
-            -String id
-            -String barangId
-            -Integer qty
-            -Integer harga
+            +String id
+            +String barangId
+            +Integer qty
+            +Integer harga
             +String getBarangId()
             +String getBarangNama()
             +String getQty()
@@ -78,23 +81,22 @@ Pelajari class diagram berikut
             +boolean hapus()
         }
         class Stock {
-            -String id
-            -Datetime waktu
-            -String username
+            +String id
+            +Datetime waktu
+            +String username
             +Datetime getWaktu()
             +String getUsername()
             +boolean baca(String id)
             +boolean tambah(String username)
             +boolean hapus()
             +boolean addDetail(String barangId, Integer qty, Integer harga)
-            +Array<SalesDetail> detail
-            -void bacaDetail()
+            +Array<SalesDetail> getList()$
         }
         class StockDetail {
-            -String id
-            -String barangId
-            -Integer qty
-            -Integer harga
+            +String id
+            +String barangId
+            +Integer qty
+            +Integer harga
             +String getBarangId()
             +String getBarangNama()
             +String getQty()
@@ -102,15 +104,334 @@ Pelajari class diagram berikut
             +String getTotal()
             +boolean add(String salesId, String barangId, Integer qty, Integer harga)
             +boolean baca(String id)
-            +Array<SalesDetail> loadDetail(String salesId)
+            +Array<SalesDetail> loadDetail(String salesId)$
             +boolean hapus()
         }
 
 ```
+> ⚠ Modifier `public` pada masing-masing properti pada class sebenarnya tidak ideal. Tapi untuk kesederhanaan program, sementara untuk class-class ini kita akan menggunakan modifier `public`.
 
-## Contoh Program
+
+### Siapkan Class
+
+Siapkan file `User.java`
 
 file: `Source Packages\tokoatk\User.java`
 ```java
+package tokoatk;
 
+import java.sql.*;
+import java.util.ArrayList;
+
+public class User {
+
+    public String username;
+    public String fullname;
+
+    public boolean login(String username, String password) {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        Connection conn = null;
+        PreparedStatement st;
+        ResultSet rs;
+
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+            // prepare select statement
+            String sql = "SELECT * from users where username=? and md5(?)=password";
+            st = conn.prepareStatement(sql);
+            st.setString(1, username);
+            st.setString(2, password);
+            rs = st.executeQuery();
+
+            boolean result = rs.next();
+            this.username = username;
+            this.fullname = rs.getString("fullname");
+            conn.close();
+
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+
+    public boolean baca(String username) {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        Connection conn = null;
+        PreparedStatement st;
+        ResultSet rs;
+
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+            // prepare select statement
+            String sql = "SELECT * from users where username=?";
+            st = conn.prepareStatement(sql);
+            st.setString(1, username);
+            rs = st.executeQuery();
+
+            boolean result = rs.next();
+            this.username = username;
+            this.fullname = rs.getString("fullname");
+            conn.close();
+
+            return result;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+
+    public String getFullname() {
+        return this.fullname;
+    }
+
+    public String getUsername() {
+        return this.username;
+    }
+
+    public boolean update() {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        Connection conn = null;
+        PreparedStatement st;
+        
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+            // prepare select statement
+            String sql = "UPDATE users set fullname=? where username=?";
+            st = conn.prepareStatement(sql);
+            st.setString(1, fullname);
+            st.setString(2, this.username);
+
+            st.executeUpdate();
+
+            conn.close();
+
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+    
+    public boolean updatePassword(String password) {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        Connection conn = null;
+        PreparedStatement st;
+        
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+            // prepare select statement
+            String sql = "UPDATE users set password=? where username=?";
+            st = conn.prepareStatement(sql);
+            st.setString(1, password);
+            st.setString(2, username);
+
+            st.executeUpdate();
+
+            conn.close();
+
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+    
+    public boolean hapus() {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        Connection conn = null;
+        PreparedStatement st;
+        
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+            // prepare select statement
+            String sql = "DELETE FROM users where username=?";
+            st = conn.prepareStatement(sql);
+            st.setString(1, username);
+
+            st.executeUpdate();
+
+            conn.close();
+
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+
+    public boolean tambah(String password) {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        Connection conn = null;
+        PreparedStatement st;
+
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+            // prepare select statement
+            String sql = "INSERT INTO users (username,fullname,password) values (?,?,MD5(?))";
+            st = conn.prepareStatement(sql);
+            st.setString(1, username);
+            st.setString(2, fullname);
+            st.setString(3, password);
+            st.executeUpdate();
+            conn.close();
+            
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+    
+    public static ArrayList<User> getList() {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        Connection conn = null;
+        PreparedStatement st;
+        ResultSet rs;
+        ArrayList<User> result = new ArrayList<User>();
+
+        try {
+            Class.forName(DBDRIVER);
+            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+            // prepare select statement
+            String sql = "SELECT * from users";
+            st = conn.prepareStatement(sql);
+            rs = st.executeQuery();
+
+            while(rs.next()) {
+                User entry = new User();
+                entry.baca(rs.getString("username"));
+                result.add(entry);
+            }
+            conn.close();
+
+            return result;
+        } catch (Exception ex) {
+            return null;
+        }
+    }
+
+}
 ```
+
+
+file: `Web Pages/tokoatk/index.jsp`
+```jsp
+<%
+    if(session.getAttribute("fullname")==null) {
+        response.sendRedirect("formlogin.jsp");
+    } else {
+        response.sendRedirect("home.jsp");
+    }
+%>
+```
+
+file: `Web Pages/tokoatk/formlogin.jsp`
+```jsp
+<%
+    RequestDispatcher dispacher = request.getRequestDispatcher("formlogin.view.jsp");
+    dispacher.forward(request, response);
+%>
+```
+
+file: `Web Pages/tokoatk/formlogin.view.jsp`
+```jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <form action="login.jsp" method="post">
+            <input name="username"><br>
+            <input name="password" type="password">
+            <button type="submit">Login</button>
+        </form>
+    </body>
+</html>
+```
+
+file: `Web Pages/tokoatk/login.jsp`
+```jsp
+<%@page import="tokoatk.User"%>
+<%
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+    
+    User user = new User();
+    if(user.login(username, password)) {
+        session.setAttribute("fullname", user.getFullname());
+        response.sendRedirect("home.jsp");
+    } else {
+            response.sendRedirect("formlogin.jsp");
+    }
+
+%>
+```
+
+file: `home.jsp`
+```jsp
+<%
+    String fullname = session.getAttribute("fullname").toString();
+    
+    request.setAttribute("fullname", fullname);
+    
+    RequestDispatcher dispacher = request.getRequestDispatcher("home.view.jsp");
+    dispacher.forward(request, response);
+%>
+```
+
+file: `home.view.jsp`
+```jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello ${fullname}</h1>
+    </body>
+</html>
+```
+
+### Soal Latihan:
+Berdasarkan class diagram, buat class `Barang` dan buat `baranglist.jsp`, `baranglist.view.jsp`
