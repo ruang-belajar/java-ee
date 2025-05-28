@@ -249,7 +249,7 @@ public class User {
             conn = DbConnection.connect();
 
             // prepare select statement
-            String sql = "UPDATE users set password=? where username=?";
+            String sql = "UPDATE users set password=md5(?) where username=?";
             st = conn.prepareStatement(sql);
             st.setString(1, password);
             st.setString(2, username);
@@ -417,6 +417,87 @@ file: `home.view.jsp`
     <body>
         <h1>Hello ${fullname}</h1>
         <a href="userlist.jsp">List User</a>
+    </body>
+</html>
+```
+
+file: `Web Pages/tokoatk/userlist.jsp`
+```jsp
+<%@page import="tokoatk.User"%>
+<%@page import="java.util.ArrayList"%>
+<%
+    ArrayList<User> list = User.getList();
+    
+    request.setAttribute("list", list);
+    
+    RequestDispatcher dispacher = request.getRequestDispatcher("userlist.view.jsp");
+    dispacher.forward(request, response);
+%>
+```
+
+file: `Web Pages/tokoatk/userlist.view.jsp`
+```jsp
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>User List</title>
+    </head>
+    <body>
+        <h1>User List</h1>
+        <a href="formusertambah.jsp">user baru</a>
+        <hr>
+    <c:forEach var="user" items="${list}">
+        ${user.getFullname()}
+    </c:forEach>
+    </body>
+</html>
+```
+
+file: `Web Pages/tokoatk/usertambah.jsp`
+```jsp
+<%@page import="tokoatk.User"%>
+<%
+    String username = request.getParameter("username").toString();
+    String fullname = request.getParameter("fullname").toString();
+    String password = request.getParameter("password").toString();
+    
+    User user = new User();
+    user.username = username;
+    user.fullname = fullname;
+    user.tambah(password);
+    
+    response.sendRedirect("userlist.jsp");
+%>
+```
+
+file: `formusertambah.jsp`
+```jsp
+<%
+    RequestDispatcher dispacher = request.getRequestDispatcher("formusertambah.view.jsp");
+    dispacher.forward(request, response);
+%>
+```
+
+file: `formusertambah.view.jsp`
+```jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Add User</title>
+    </head>
+    <body>
+        <h1>Add User</h1>
+        <form action="usertambah.jsp" method="post">
+            Username: <input name="username"><br>
+            Fullname: <input name="fullname"><br>
+            Password: <input name="password"><br>
+            <button type="submit">Tambah</button>
+        </form>
     </body>
 </html>
 ```
