@@ -50,7 +50,7 @@ Pelajari class diagram berikut
         }
         class Sales {
             +String id
-            +Datetime waktu
+            +LocalDateTime waktu
             +String username
             +Datetime getWaktu()
             +String getId()
@@ -73,7 +73,7 @@ Pelajari class diagram berikut
             +String getTotal()
             +boolean add(String salesId, String barangId, Integer qty, Integer harga)
             +boolean baca(String id)
-            +Array<SalesDetail> loadDetail(String salesId)
+            +ArrayList<SalesDetail> loadDetail(String salesId)
             +boolean hapus()
         }
         class Barang {
@@ -85,11 +85,11 @@ Pelajari class diagram berikut
             +boolean update()
             +boolean tambah()
             +boolean hapus()
-            +Array<Barang> getList()$
+            +ArrayList<Barang> getList()$
         }
         class Stock {
             +String id
-            +Datetime waktu
+            +LocalDateTime waktu
             +String username
             +Datetime getWaktu()
             +String getUsername()
@@ -97,7 +97,7 @@ Pelajari class diagram berikut
             +boolean tambah(String username)
             +boolean hapus()
             +boolean addDetail(String barangId, Integer qty, Integer harga)
-            +Array<SalesDetail> getList()$
+            +ArrayList<SalesDetail> getList()$
         }
         class StockDetail {
             +String id
@@ -111,7 +111,7 @@ Pelajari class diagram berikut
             +String getTotal()
             +boolean add(String salesId, String barangId, Integer qty, Integer harga)
             +boolean baca(String id)
-            +Array<SalesDetail> loadDetail(String salesId)$
+            +ArrayList<SalesDetail> loadDetail(String salesId)$
             +boolean hapus()
         }
 
