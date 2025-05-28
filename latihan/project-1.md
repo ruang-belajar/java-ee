@@ -120,7 +120,31 @@ Pelajari class diagram berikut
 
 ### Siapkan Class
 
-Siapkan file `User.java`
+Siapkan file-file berikut:
+
+file: `Source Packages\tokoatk\DbConnection.java`
+```java
+package tokoatk;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DbConnection {
+    public static Connection connect() {
+        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
+        String DBUSER = "root";
+        String DBPASS = "";
+
+        try {
+            Class.forName(DBDRIVER);
+            return DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+        } catch(Exception e) {
+            throw new IllegalArgumentException("SQL Error");
+        }
+    }
+}
+```
 
 file: `Source Packages\tokoatk\User.java`
 ```java
@@ -135,18 +159,12 @@ public class User {
     public String fullname;
 
     public boolean login(String username, String password) {
-        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
-        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
-        String DBUSER = "root";
-        String DBPASS = "";
-
         Connection conn = null;
         PreparedStatement st;
         ResultSet rs;
 
         try {
-            Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+            conn = DbConnection.connect();
 
             // prepare select statement
             String sql = "SELECT * from users where username=? and md5(?)=password";
@@ -167,18 +185,12 @@ public class User {
     }
 
     public boolean baca(String username) {
-        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
-        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
-        String DBUSER = "root";
-        String DBPASS = "";
-
         Connection conn = null;
         PreparedStatement st;
         ResultSet rs;
 
         try {
-            Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+            conn = DbConnection.connect();
 
             // prepare select statement
             String sql = "SELECT * from users where username=?";
@@ -206,17 +218,12 @@ public class User {
     }
 
     public boolean update() {
-        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
-        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
-        String DBUSER = "root";
-        String DBPASS = "";
-
+       
         Connection conn = null;
         PreparedStatement st;
         
         try {
-            Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+            conn = DbConnection.connect();
 
             // prepare select statement
             String sql = "UPDATE users set fullname=? where username=?";
@@ -235,17 +242,11 @@ public class User {
     }
     
     public boolean updatePassword(String password) {
-        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
-        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
-        String DBUSER = "root";
-        String DBPASS = "";
-
         Connection conn = null;
         PreparedStatement st;
         
         try {
-            Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+            conn = DbConnection.connect();
 
             // prepare select statement
             String sql = "UPDATE users set password=? where username=?";
@@ -264,17 +265,11 @@ public class User {
     }
     
     public boolean hapus() {
-        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
-        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
-        String DBUSER = "root";
-        String DBPASS = "";
-
         Connection conn = null;
         PreparedStatement st;
         
         try {
-            Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+            conn = DbConnection.connect();
 
             // prepare select statement
             String sql = "DELETE FROM users where username=?";
@@ -292,17 +287,11 @@ public class User {
     }
 
     public boolean tambah(String password) {
-        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
-        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
-        String DBUSER = "root";
-        String DBPASS = "";
-
         Connection conn = null;
         PreparedStatement st;
 
         try {
-            Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+            conn = DbConnection.connect();
 
             // prepare select statement
             String sql = "INSERT INTO users (username,fullname,password) values (?,?,MD5(?))";
@@ -320,19 +309,13 @@ public class User {
     }
     
     public static ArrayList<User> getList() {
-        String DBDRIVER = "com.mysql.cj.jdbc.Driver";
-        String DBCONNECTION = "jdbc:mysql://localhost:3306/tokoatk";
-        String DBUSER = "root";
-        String DBPASS = "";
-
         Connection conn = null;
         PreparedStatement st;
         ResultSet rs;
         ArrayList<User> result = new ArrayList<User>();
 
         try {
-            Class.forName(DBDRIVER);
-            conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+            conn = DbConnection.connect();
 
             // prepare select statement
             String sql = "SELECT * from users";
@@ -351,10 +334,8 @@ public class User {
             return null;
         }
     }
-
 }
 ```
-
 
 file: `Web Pages/tokoatk/index.jsp`
 ```jsp
