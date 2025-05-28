@@ -473,7 +473,7 @@ file: `Web Pages/tokoatk/usertambah.jsp`
 %>
 ```
 
-file: `formusertambah.jsp`
+file: `Web Pages/tokoatk/formusertambah.jsp`
 ```jsp
 <%
     RequestDispatcher dispacher = request.getRequestDispatcher("formusertambah.view.jsp");
@@ -481,7 +481,7 @@ file: `formusertambah.jsp`
 %>
 ```
 
-file: `formusertambah.view.jsp`
+file: `Web Pages/tokoatk/formusertambah.view.jsp`
 ```jsp
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
