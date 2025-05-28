@@ -416,6 +416,7 @@ file: `home.view.jsp`
     </head>
     <body>
         <h1>Hello ${fullname}</h1>
+        <a href="userlist.jsp">List User</a>
     </body>
 </html>
 ```
