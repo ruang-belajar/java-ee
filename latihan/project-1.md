@@ -13,7 +13,7 @@ Operator toko ATK ini ada lebih dari satu, masing-masing punya username dan pass
 ## Fase 1
 
 ### Setup Database
-Buat database sebagai berikut:
+Buat database `tokoatk` dengan rancangan sebagai berikut:
 
 ![](res/project-1-1.png)
 
@@ -42,10 +42,10 @@ Pelajari class diagram berikut
             +String getFullname()
             +String getUsername()
             +boolean baca(String id)
+            +boolean tambah(String password)
             +boolean update()
-            +boolean updatePassword(String password)
             +boolean hapus()
-            +boolean tambah(String password)$
+            +boolean updatePassword(String password)
             +ArrayList<User> getList()$
         }
         class Sales {
