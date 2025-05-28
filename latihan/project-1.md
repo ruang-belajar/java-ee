@@ -503,11 +503,6 @@ file: `Web Pages/tokoatk/formusertambah.view.jsp`
 ```
 
 ### Soal Latihan:
-- Buat `userlist.jsp` dan `userlist.view.jsp`:
-  - menampilkan list user (gunakan `User.getList()` untuk mengambil list user)
-  - link yang mengarah ke `formusertambah.jsp`
-- Buat `login.jsp`, `formusertambah.jsp` dan `formusertambah.view.jsp`:
-  - form tambah user, terdiri dari: _username_, _fullname_, _password_
-  - form action mengarah ke `login.jsp`
-  - jika login berhasil, redirect ke `home.jsp`, jika login gagal, redirect ke `formlogin.jsp`
-
+- Buat tabel `barang`
+- Buat class `Barang`
+- BUat `baranglist.jsp`, `baranglist.view.jsp`, `barangtambah.jsp`, `formtambahbarang.jsp`, `formbarangtambah.view.jsp`
