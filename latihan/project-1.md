@@ -85,6 +85,7 @@ Pelajari class diagram berikut
             +boolean update()
             +boolean tambah()
             +boolean hapus()
+            +Array<Barang> getList()$
         }
         class Stock {
             +String id
