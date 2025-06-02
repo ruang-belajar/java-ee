@@ -1,4 +1,4 @@
-# Project 1 - Toko ATK
+# Project Toko ATK - Fase 1
 
 ![](res/project-1-0.png)
 
@@ -10,9 +10,7 @@ Operator toko ATK ini ada lebih dari satu, masing-masing punya username dan pass
 
 > ℹ Untuk project ini kita akan menggunakan folder `tokoatk` pada _Web Pages_ dan _Source Packages_
 
-## Fase 1
-
-### Setup Database
+## Setup Database
 Buat database `tokoatk` dengan rancangan sebagai berikut:
 
 ![](res/project-1-1.png)
@@ -23,7 +21,7 @@ INSERT INTO `users` (`username`, `fullname`, `password`) VALUES
 ('admin', 'Administrator', '202cb962ac59075b964b07152d234b70');
 ```
 
-### Class Diagram
+## Class Diagram
 
 Pelajari class diagram berikut
 
@@ -81,6 +79,10 @@ Pelajari class diagram berikut
             +String nama
             +String jenis
             +Integer harga
+            +String getNama()
+            +String getJenis()
+            +Integer getHarga()
+            +String getId()
             +boolean baca(String id)
             +boolean update()
             +boolean tambah()
@@ -119,7 +121,7 @@ Pelajari class diagram berikut
 > ⚠ Modifier `public` pada masing-masing properti pada class sebenarnya tidak ideal. Tapi untuk kesederhanaan program, sementara untuk class-class ini kita akan menggunakan modifier `public`.
 
 
-### Siapkan Class
+## Siapkan Class
 
 Siapkan file-file berikut:
 
@@ -503,7 +505,7 @@ file: `Web Pages/tokoatk/formusertambah.view.jsp`
 </html>
 ```
 
-### Soal Latihan:
+## Soal Latihan:
 - Buat tabel `barang`
 - Buat class `Barang`
-- BUat `baranglist.jsp`, `baranglist.view.jsp`, `barangtambah.jsp`, `formtambahbarang.jsp`, `formbarangtambah.view.jsp`
+- Buat `baranglist.jsp`, `baranglist.view.jsp`, `barangtambah.jsp`, `formtambahbarang.jsp`, `formbarangtambah.view.jsp`
