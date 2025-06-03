@@ -57,21 +57,23 @@ Pelajari class diagram berikut
             +boolean tambah(String username)
             +boolean hapus()
             +boolean addDetail(String barangId, Integer qty, Integer harga)
-            +ArrayList<SalesDetail> getList()$
+            +ArrayList<SalesDetail> getDetail()
+            +ArrayList<Sales> getList()$
         }
         class SalesDetail {
             +String id
+            +String salesId
             +String barangId
             +Integer qty
             +Integer harga
+            +String getId()
             +String getBarangId()
             +String getBarangNama()
-            +String getQty()
-            +String getHarga()
-            +String getTotal()
-            +boolean add(String salesId, String barangId, Integer qty, Integer harga)
+            +Integer getQty()
+            +Integer getHarga()
+            +Integer getTotal()
+            +boolean tambah()
             +boolean baca(String id)
-            +ArrayList<SalesDetail> loadDetail(String salesId)
             +boolean hapus()
         }
         class Barang {
@@ -93,27 +95,29 @@ Pelajari class diagram berikut
             +String id
             +LocalDateTime waktu
             +String username
-            +Datetime getWaktu()
+            +LocalDateTime getWaktu()
             +String getUsername()
             +boolean baca(String id)
             +boolean tambah(String username)
             +boolean hapus()
             +boolean addDetail(String barangId, Integer qty, Integer harga)
-            +ArrayList<SalesDetail> getList()$
+            +ArrayList<StockDetail> getDetail()
+            +ArrayList<Stock> getList()$
         }
         class StockDetail {
             +String id
+            +String stockId
             +String barangId
             +Integer qty
             +Integer harga
+            +String getId()
             +String getBarangId()
             +String getBarangNama()
-            +String getQty()
-            +String getHarga()
-            +String getTotal()
-            +boolean add(String salesId, String barangId, Integer qty, Integer harga)
+            +Integer getQty()
+            +Integer getHarga()
+            +Integer getTotal()
+            +boolean tambah()
             +boolean baca(String id)
-            +ArrayList<SalesDetail> loadDetail(String salesId)$
             +boolean hapus()
         }
 
