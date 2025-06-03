@@ -1,5 +1,37 @@
 # Project Toko ATK - Fase 2
 
+## Setup tabel `salesm` dan `salesd`
+
+Anda bisa check diagram ERD untuk tabel yang akan kita buat pada [Project ATK - Fase 1](../latihan/project-1.md). Berikut query yang Anda bisa gunakan untuk menyiapkan tabel `salesm` dan `salesd`:
+
+```sql
+CREATE TABLE `salesd` (
+  `id` int(11) NOT NULL,
+  `salesId` varchar(16) NOT NULL,
+  `barangId` varchar(16) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `harga` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `salesm` (
+  `id` varchar(16) NOT NULL,
+  `waktu` datetime DEFAULT NULL,
+  `username` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+ALTER TABLE `salesd`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `salesm`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `salesd`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+```
+
 ## Review `Barang`
 
 file: `Source Package/tokoatk/Barang.java`
@@ -295,6 +327,7 @@ public class Sales {
             boolean result = rs.next();
             this.id = rs.getString("id");
             //this.waktu = rs.getDate("waktu");
+            // untuk sementara kita akan abaikan dulu field waktu ini
             this.username = rs.getString("username");
             conn.close();
 
@@ -314,7 +347,6 @@ public class Sales {
             LocalDateTime dt = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmssS");
             id = dt.format(formatter);
-            
 
             // prepare select statement
             String sql = "INSERT INTO salesm (id,username) values (?,?)";
@@ -420,20 +452,12 @@ public class Sales {
 
 file: `Source Package/tokoatk/SalesDetail.java`
 ```java
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tokoatk;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-/**
- *
- * @author En Tay
- */
 public class SalesDetail {
     public Integer id;
     public String salesId;
@@ -629,3 +653,10 @@ file: `Web Pages/tokoatk/salesdetailtambah.jsp`
 
 %>
 ```
+
+## Soal Latihan:
+- Buat tabel `salesm` dan `salesd`
+- Buat class `Sales` dan `SalesDetail` (lihat diagram di [Project ATK - Fase 1](../latihan/project-1.md))
+- Buat halaman berikut:
+  - `stocklist.jsp` dan `stocklist.view.jsp`: menampilkan list transaksi
+  - `formstoctambah.jsp`, `formstocktambah.view`, `stocktambah.jsp`: untuk input detail transaksi baru
