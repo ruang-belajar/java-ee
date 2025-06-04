@@ -570,7 +570,7 @@ public class SalesDetail {
 file: `Web Pages/tokoatk/formsalestambah.jsp`
 ```jsp
 <%
-    RequestDispatcher dispacher = request.getRequestDispatcher("formbarangtambah.view.jsp");
+    RequestDispatcher dispacher = request.getRequestDispatcher("formsalestambah.view.jsp");
     dispacher.forward(request, response);
 %>
 ```
