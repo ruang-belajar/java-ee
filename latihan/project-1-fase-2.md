@@ -27,9 +27,7 @@ ALTER TABLE `salesm`
   ADD PRIMARY KEY (`id`);
 
 
-ALTER TABLE `salesd`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
+ALTER TABLE `salesd` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ```
 
 ## Review `Barang`
@@ -569,9 +567,20 @@ public class SalesDetail {
 
 file: `Web Pages/tokoatk/formsalestambah.jsp`
 ```jsp
+<%@page import="tokoatk.Sales"%>
 <%
-    RequestDispatcher dispacher = request.getRequestDispatcher("formbarangtambah.view.jsp");
-    dispacher.forward(request, response);
+    String id;
+    Sales sales = new Sales();
+    if(request.getParameter("id")==null) {
+        sales.tambah(session.getAttribute("fullname").toString());
+    } else {
+        sales.baca(request.getParameter("id"));
+    }
+    
+    request.setAttribute("sales", sales);
+    
+    RequestDispatcher dispatcher = request.getRequestDispatcher("formsalestambah.view.jsp");
+    dispatcher.forward(request, response);
 %>
 ```
 
