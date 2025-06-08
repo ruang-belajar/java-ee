@@ -142,3 +142,8 @@
 ## Pertemuan 11
 - Review tugas: `baranglist.jsp`, `baranglist.view.jsp`, `barangtambah.jsp`, `formtambahbarang.jsp`, `formbarangtambah.view.jsp`
 - Pelajari [Project Toko ATK - Fase 2](latihan/project-1-fase-2.md)
+
+
+## Pertemuan 12
+- Review tugas
+- API
