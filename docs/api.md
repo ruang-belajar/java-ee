@@ -2,6 +2,9 @@
 
 API (_Application Programming Interface_) adalah fitur yang memungkinkan dua aplikasi atau sistem yang berbeda untuk saling berkomunikasi dan bertukar data.
 
+Untuk memudahkan kita memanipulasi objek dan melakukan _API call_, kita akan menggunakan library _jQuery_. Oleh sebab itu, `<script src="https://code.jquery.com/jquery-3.7.1.min.js" ...></script>` ditambahkan pada header halaman. Untuk mempelajari lebih banyak tentang library ini, check
+[jquery.com](https://jquery.com/).
+
 Pelajari contoh program berikut:
 
 file: `apitest1.jsp`
@@ -48,7 +51,7 @@ file: `apitest1.jsp`
                 let namaBelakang = $("#belakang").val();
 
                 //  request data via apidata2.jsp
-                //  kirim namaDepan dan namaBelakang sebagai POST variab
+                //  kirim namaDepan dan namaBelakang sebagai POST variabel
                 $.post("apidata2.jsp", {depan: namaDepan, belakang: namaBelakang}, function (result) {
                     // output dari apidata2.jsp tersimpan dalam variabel result
                     // tampilkan result
@@ -84,6 +87,8 @@ file: `apidata2.jsp`
 ```
 
 _API call_ dilakukan lewat perintah `$.post()`. Request ini dikirim ke file `apidata1.jsp` dan `apidata2.jsp`. Perintah `out.print()` pada adalah untuk mengirimkan kembali data (berupa text) yang dibaca kembali di halaman yang melakukan _request_ (`apitest1.jsp`). Dengan cara ini kita bisa meminta data ke server, tanpa harus reload halaman.
+
+Fitur API ini bukan saja bisa digunakan oleh browser, tapi juga aplikasi lain. Selama ia bisa berkomunikasi dengan protokol HTTP, maka ia bisa request informasi (seperti contoh request ke `apitest1.jsp`).
 
 `$("#panel").html(result);` adalah merubah isi dari `<div id="panel">` dengan text yang diterima dari `apidata1.jsp`. Dengan cara ini kita mengubah sebagian dari tampilan halaman, tanpa reload seluruh halaman. Prinsip serupa digunakan jika kita mau membangun _Single Page Application (SPA)_.
 

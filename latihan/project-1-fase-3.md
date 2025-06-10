@@ -2,6 +2,7 @@
 
 Fase 3 ini terkait dengan materi [API](../docs/api.md).
 
+## API
 Edit file `baranglist.view.jsp` yang dibuat pada fase sebelumnya, dan buat file `api.baranggantinama.jsp` dan `api.barangstat.jsp`.
 
 file (edit): `Web Pages/tokoatk/baranglist.view.jsp`
@@ -94,7 +95,9 @@ Berbeda dengan proses _hapus barang_, proses _penggantian nama_ dilakukan via AP
 
 API `api.barangstat.jsp` memberikan output dalam format _JSON_. Format _JSON_ ini merupakan format data yang umum digunakan untuk mengirim data yang kompleks. Oleh Javascript, data yang dikirim menggunakan format _JSON_ bisa di-_parsing_ menggunakan perintah `JSON.parse()`
 
-## Soal Latihan
+### Soal Latihan
 - Buat API `api.salestotal.jsp` yang menerima 1 POST variabel dengan berupa `id` Sales dan menampilkan `qty * harga` dari seluruh item object Sales.
 - Buat tombol pada `formsalestambah.view.jsp` yang memanggil API `api.salestotal.jsp`, kemudian menampilkan hasilnya\
   ![](res/project-1-2.png)
+
+## Bootstrap
