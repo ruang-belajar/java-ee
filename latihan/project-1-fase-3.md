@@ -43,7 +43,7 @@ file (edit): `Web Pages/tokoatk/baranglist.view.jsp`
         function showStat()  {
             $.post("api.barangstat.jsp",function(result) {
                //alert(result); 
-               let obj = JSON.parse(result);
+               let obj = _JSON_.parse(result);
                alert("Banyak data: "+obj.banyak+"\nRata-rata: "+obj.rata2);
             });
         }
@@ -90,4 +90,11 @@ file: `Web Pages/tokoatk/api.barangstat.jsp`
 
 Proses hapus barang dilakukan dengan cara mengirimkan request ke `baranghapus.jsp` dengan menyertakan parameter `id`, kemudian redirect kembali ke `baranglist.jsp`.
 
-Proses penggantian nama dilakukan via API dengan perintah `$.post()` (jQuery). Perintah `$('#nama'+id).html(namabaru)` memungkinkan kita mengubah sebagian text pada halaman tanpa reload seluruh halaman.
+Berbeda dengan proses _hapus barang_, proses _penggantian nama_ dilakukan via API dengan perintah `$.post()` yang disediakan library _jQuery_. Perintah `$('#nama'+id).html(namabaru)` memungkinkan kita mengubah sebagian text pada halaman tanpa reload seluruh halaman.
+
+API `api.barangstat.jsp` memberikan output dalam format _JSON_. Format _JSON_ ini merupakan format data yang umum digunakan untuk mengirim data yang kompleks. Oleh Javascript, data yang dikirim menggunakan format _JSON_ bisa di-_parsing_ menggunakan perintah `JSON.parse()`
+
+## Soal Latihan
+- Buat API `api.salestotal.jsp` yang menerima 1 POST variabel dengan berupa `id` Sales dan menampilkan `qty * harga` dari seluruh item object Sales.
+- Buat tombol pada `formsalestambah.view.jsp` yang memanggil API `api.salestotal.jsp`, kemudian menampilkan hasilnya\
+  ![](res/project-1-2.png)

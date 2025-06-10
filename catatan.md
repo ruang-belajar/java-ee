@@ -134,7 +134,6 @@
 - Tugas:
   - Mengikuti metode MVC, rubah `mahasiswa.tambah.jsp`, `mahasiswa.update.jsp`, `mahasiswa.baca.jsp` sehingga output ditampilkan menggunakan _view_, masing-masing dengan nama `mahasiswa.tambah.view.jsp`, `mahasiswa.update.view.jsp`, `mahasiswa.baca.view.jsp`
 
-
 ## Pertemuan 10
 - Review tugas
 - [Project Toko ATK - Fase 1](latihan/project-1.md)
@@ -143,7 +142,9 @@
 - Review tugas: `baranglist.jsp`, `baranglist.view.jsp`, `barangtambah.jsp`, `formtambahbarang.jsp`, `formbarangtambah.view.jsp`
 - Pelajari [Project Toko ATK - Fase 2](latihan/project-1-fase-2.md)
 
-
 ## Pertemuan 12
 - Review tugas
-- API
+- [API](docs/api.md)
+- [Project Toko ATK - Fase 3](latihan/project-1-fase-3.md)
+
+---
