@@ -92,4 +92,59 @@ Fitur API ini bukan saja bisa digunakan oleh browser, tapi juga aplikasi lain. S
 
 `$("#panel").html(result);` adalah merubah isi dari `<div id="panel">` dengan text yang diterima dari `apidata1.jsp`. Dengan cara ini kita mengubah sebagian dari tampilan halaman, tanpa reload seluruh halaman. Prinsip serupa digunakan jika kita mau membangun _Single Page Application (SPA)_.
 
- 
+## JSON
+JSON (_JavaScript Object Notation_) adalah format pertukaran data yang ringan dan mudah dibaca oleh manusia maupun mesin. JSON biasanya digunakan untuk mengirim data antara server dan aplikasi web.
+
+Ciri-ciri JSON:
+- Berformat teks (plain text)
+- Menggunakan pasangan _key-value_
+- Struktur mirip dengan objek di JavaScript
+- Bisa berisi objek, array, string, angka, boolean, dan null
+
+JSON sangat umum digunakan dalam pengembangan aplikasi web dan API karena sederhana dan mudah diolah di berbagai bahasa pemrograman.
+
+Contoh data dalam bentuk JSON:
+```json
+{
+  "nama": "Andi",
+  "umur": 25,
+  "aktif": true,
+  "hobi": ["membaca", "berenang"]
+}
+```
+
+Contoh program untuk menghasilkan data dalam format JSON:
+
+```jsp
+<%
+    out.print("{");
+    out.print("\"nama\":\"Andi\",");
+    out.print("\"umur\":25,");
+    out.print("\"aktif\":true,");
+    out.print("\"hobi\":[\"membaca\",\"berenang\"]");
+    out.print("}");
+%>
+```
+
+Untuk membuat output JSON dengan cara seperti di atas, tapi cara seperti itu akan sangat menyulitkan, terutama jika data yang akan dikirim banyak atau kompleks. Untuk keperluan itu, Java memiliki `JsonObjectBuilder` yang bisa membantu kita membuat data dalam bentuk JSON.
+
+```jsp
+<%@ page import="javax.json.*, java.io.*" %>
+<%@ page contentType="application/json; charset=UTF-8" %>
+
+<%
+    // Membuat objek JSON menggunakan JsonObjectBuilder
+    JsonObjectBuilder builder = Json.createObjectBuilder();
+    builder.add("nama", "Andi");
+    builder.add("umur", 25);
+    builder.add("aktif", true);
+    builder.add("alamat", Json.createObjectBuilder()
+                              .add("kota", "Jakarta")
+                              .add("kodePos", "12345"));
+
+    JsonObject jsonObject = builder.build();
+
+    // Menulis output JSON ke response
+    out.print(jsonObject.toString());
+%>
+```
