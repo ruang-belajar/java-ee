@@ -147,4 +147,42 @@
 - [API](docs/api.md)
 - [Project Toko ATK - Fase 3](latihan/project-1-fase-3.md)
 
+
+## Pertemuan 13
+- Di pertemuan ini, kita akan menambahkan Bootstap (framework CSS) ke halaman web yang kita buat sebelumnya
+- Untuk menambahkan Bootstrap, kita akan perlu menambahkan _link_ di bagian header HTML. Check link di [BootstrapCDN](https://www.bootstrapcdn.com/)
+  - Check versi 4.x.x
+  - copy link _CSS - HTML_ dan _Javascript - HTML_, paste ke bagian header HTML.
+- Edit `formlogin.view.jsp`
+  - Tambahkan link ke _css_ & _js_ Bootstrap.
+  - Rubah isi `<body>` menjadi seperti berikut:
+    ```html
+    <div class="mx-auto" style="margin-top:100px; width:300px">
+        <div class="text-center mb-2">LOGIN</div>
+        <form action="login.jsp" method="post">
+            <input name="username" class="form-control"><br>
+            <input name="password" class="form-control" type="password">
+            <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+        </form>
+    </div>
+    ```
+  - Diskusi:
+    - Coba lakukan modifikasi pada class (hapus/ubah), kemudian lihat perubahan pada tampilannya.
+    - Apa kegunaan class `mx-auto`, `text-center`, `mb-2`, `mt-3`, `form-control`, `btn-primary`, `btn-block`?
+    - Apa kegunaan atribut `style`?
+  - Latihan:
+    - Tambahkan _gradient background_. Check [https://cssgradient.io/](https://cssgradient.io/).
+    - Tambahkan garis _border_ dan _rounded radius_, dan rubah warna garis.    
+- Edit `home.view.jsp`
+  - Tambahkan link ke _css_ & _js_ Bootstrap.
+  - Tambah class `btn` ke `List Sales`, `List Barang`, dan `List Stock`
+  - Tambahkan [tile1.jpg](res/tile1.jpg) sebagai background
+  - Perbesar ukuran judul
+  - Buat tulisan dan tombol berada di tengah
+- Edit `baranglist.view.jsp`
+  - Tambahkan link ke _css_ & _js_ Bootstrap.
+  - Rubah list barang menjadi bentuk tabel, tambahkan class `table`
+  - Tambah class `btn` ke `Tambah Barang`
+    
+- 
 ---
