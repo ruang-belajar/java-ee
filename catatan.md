@@ -185,5 +185,26 @@
   - Tambah class `btn` ke `Tambah Barang`
     
 ## Pertemuan 14
-- Review tugas
-- Springboot
+- Github
+  - Clone https://github.com/ruang-belajar/JspProject1.git
+  - Buka project di Netbeans
+  - Buat file JSP _nama_.testing.jsp
+  - Tulis nama dalam `<title>`
+  - Simpan file
+  - Commit file _nama_.testing.jsp, kemudian push
+- Classroom Github
+  - Accept group assignment: https://classroom.github.com/a/j2pqL1Gy
+  - Clone repositori
+- Tugas:
+  - Lengkapi `index.jsp` dengan elemen berikut (1 orang)
+    - Tambahkan bootstrap
+    - Tambahkan judul, contoh: _Project Group 1_\
+      _Group 1_ disesuaikan dengan nama kelompok masing-masing
+    - Link ke halaman `*.messageboard.jsp` beserta foto masing-masing anggota tim
+    - Tambahkan CSS untuk menghias halaman
+  - Buat `*.messageboard.jsp` oleh masing-masing anggota tim dengan elemen berikut:
+    - buat file ***nama*.messageboard.jsp** dan ***nama*.messageboard.view.jsp**
+    - Tampilkan _nama_ dan _foto_
+    - Tambahkan CSS untuk menghias halaman
+  - Masing-masing anggota tim hanya _commit_ dan _push_ untuk file yang dikerjakannya (file: ***nama*.messageboard.jsp** dan ***nama*.messageboard.view.jsp**)
+  - Pada saat penilaian seseorang akan _pull_ semua kerjaan untuk hasilnya bisa dipresentasikan.
