@@ -186,7 +186,7 @@
     
 ## Pertemuan 14
 - Latihan Github
-  - Clone https://github.com/ruang-belajar/JspProject1.git
+  - Clone https://github.com/ruang-belajar/jsp-project-test
   - Buka project di Netbeans
   - Buat file JSP _nama_.testing.jsp
   - Tulis nama dalam `<title>`
