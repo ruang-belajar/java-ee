@@ -184,7 +184,7 @@
   - Rubah list barang menjadi bentuk tabel, tambahkan class `table`
   - Tambah class `btn` ke `Tambah Barang`
     
-## Pertemuan 14
+## Pertemuan 14-15
 - Latihan Github
   - Clone https://github.com/ruang-belajar/jsp-project-test
   - Buka project di Netbeans
