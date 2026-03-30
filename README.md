@@ -1,10 +1,10 @@
 # Ruang Belajar: Java EE
+
 Repositori materi kuliah _Pemrograman Java Lanjut_
 
 1. [Modul Belajar](docs/README.md)
 2. [Catatan Kuliah](catatan.md)
 3. [Folder contoh program](src/)
-4. [pujangga123/LatihanJSP](https://github.com/pujangga123/LatihanJSP)
 
 **Catatan**
 

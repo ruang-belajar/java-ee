@@ -19,6 +19,7 @@ Berikut aplikasi yang akan digunakan dalam perkuliahan.
       ![](res/setup-project-4.png)
    5. Buat project baru, klik: **File - New Project**
    6. Pilih **Java with Ant - Java Web - Web Application**, kemudian klik **Next**
+      ![](res/setup-2.png)
    7. Tentukan **Project Name** (contoh: `WebApplication1`), kemudian klik **Next**
    8. Pilih **Server**. Jika Anda melakukan langkah 2-4 dengan benar, maka akan ada opsi **Apache Tomcat or TomEE**. Pilih opsi itu kalau klik **Next**
    9. Pada pilihan **Frameworks**, untuk sementara ini Anda bisa abaikan, langsung klik **Finish**
